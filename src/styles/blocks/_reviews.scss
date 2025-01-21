@@ -1,0 +1,90 @@
+@use "../helpers/" as *;
+
+.reviews {
+    min-height: rem(500);
+
+    @include background-gradient("/images/story-bg.jpg");
+
+    &__inner {
+        position: relative;
+        padding-block: rem(40) rem(69);
+    }
+
+    &__header {
+    }
+
+    &__quotes {
+        position: absolute;
+        display: block;
+        font-family: var(--font-family-accent);
+        font-size: rem(100);
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include abs-x;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: rem(90);
+        row-gap: rem(39);
+    }
+
+    &__carousel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(44);
+    }
+
+    &__text {
+        text-align: center;
+        font-family: var(--font-family-accent);
+        max-width: rem(775);
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: 1.6;
+        letter-spacing: 0.03em;
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(1);
+
+        &-position {
+            font-weight: 300;
+            font-size: rem(13);
+            line-height: 1.6;
+            text-transform: uppercase;
+        }
+    }
+
+    &__controls {
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: rem(13);
+        }
+
+        &-item {
+        }
+
+        &-image {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .is-active {
+            width: rem(70);
+            height: rem(70);
+        }
+    }
+}

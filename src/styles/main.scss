@@ -1,0 +1,18 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+@use "../styles/blocks/header";
+@use "../styles/blocks/welcome";
+@use "../styles/blocks/underline";
+@use "../styles/blocks/logo";
+@use "../styles/blocks/burger-button";
+@use "../styles/blocks/button";
+@use "../styles/blocks/content";
+@use "../styles/blocks/story";
+@use "../styles/blocks/expertise";
+@use "../styles/blocks/team";
+@use "../styles/blocks/gallery";
+@use "../styles/blocks/reviews";

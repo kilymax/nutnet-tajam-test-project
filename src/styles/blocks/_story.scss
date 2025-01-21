@@ -1,0 +1,54 @@
+@use "../helpers/" as *;
+
+.story {
+    &__inner {
+        display: flex;
+
+        padding-block: fluid(70, 20);
+    }
+
+    &__preview {
+        width: 100%;
+        padding-inline: rem(10);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__image {
+    }
+
+    &__body {
+        max-width: rem(540);
+    }
+
+    &__title {
+        margin-bottom: rem(11);
+    }
+
+    &__description {
+    }
+
+    &__link {
+    }
+
+    &__watch {
+        position: relative;
+        min-height: rem(550);
+        @include background-gradient("/images/story-bg.jpg");
+    }
+
+    &__play {
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(37);
+
+        @include abs-center;
+
+        &-button {
+        }
+
+        &-link {
+        }
+    }
+}

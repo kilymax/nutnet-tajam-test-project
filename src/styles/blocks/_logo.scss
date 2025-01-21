@@ -1,0 +1,14 @@
+@use "../helpers/" as *;
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: rem(6.25);
+    font-weight: 100;
+    font-size: rem(30);
+
+    &__title {
+        @include text-gradient;
+    }
+}

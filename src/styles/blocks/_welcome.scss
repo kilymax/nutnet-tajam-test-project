@@ -1,0 +1,44 @@
+@use "../helpers/" as *;
+
+.welcome {
+    max-height: rem(670);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    text-align: center;
+    padding-block: 195px;
+
+    @include background-gradient("/images/welcome-bg.jpg");
+
+    &__inner {
+        display: flex;
+        min-height: rem(242);
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: rem(40);
+    }
+
+    &__description {
+        max-width: rem(780);
+        line-height: 1.8;
+        margin-bottom: rem(52);
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        @include mobile-s {
+            flex-direction: column;
+
+            .link {
+                width: 80%;
+            }
+        }
+    }
+}

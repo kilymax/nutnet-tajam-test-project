@@ -1,0 +1,60 @@
+@use "../helpers/" as *;
+
+.expertise {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-block: rem(62) rem(95);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: rem(99);
+        row-gap: rem(10);
+    }
+
+    &__title {
+    }
+
+    &__subtitle {
+        font-family: var(--font-family-accent);
+        font-weight: 400;
+        letter-spacing: 0.07em;
+    }
+
+    &__body {
+        max-width: rem(920);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(74) rem(44);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-image {
+            margin-bottom: rem(32);
+        }
+
+        &-title {
+            margin-bottom: rem(18);
+        }
+
+        &-description {
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: 0.05em;
+            text-align: center;
+            color: var(--color-gray-dark);
+        }
+    }
+}

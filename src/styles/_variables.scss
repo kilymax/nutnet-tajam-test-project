@@ -1,0 +1,32 @@
+@use "helpers" as *;
+
+:root {
+    // colors
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-gray-dark: #333333;
+    --color-gray-light: rgb(65, 61, 75, 0.3);
+    --color-purple: rgba(49, 29, 94, 0.85);
+    --color-purple-dark: rgba(9, 5, 47, 0.85);
+    --color-gray-purple: #413d4b;
+    --color-accent-1: #00e0d0;
+    --color-accent-2: #52a9cf;
+    --color-error: #ff5500;
+
+    --border: #{rem(1)} solid var(--color-accent-1);
+
+    // fonts
+    --font-family-base: "Roboto", sans-serif;
+    --font-family-accent: "Playfair Display", sans-serif;
+
+    // container
+    --container-width: #{rem(940)};
+    --container-padding-x: #{rem(16)};
+
+    // @include laptop {
+    //     --container-width: #{rem(1280)};
+    // }
+
+    // animation
+    --transition-duration: 0.2s;
+}

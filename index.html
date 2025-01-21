@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+        <title>Tajam</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <link rel="stylesheet" href="/src/styles/main.css" />
+        <script src="./src/scripts/main.js" type="module" defer></script>
+    </head>
+    <body>
+        <header class="header" data-js-header>
+            <div class="header__body">
+                <div class="header__body-inner container">
+                    <a
+                        href="/"
+                        class="header__logo logo"
+                        aria-label="Home"
+                        title="Home"
+                    >
+                        <img
+                            src="./icons/logo.svg"
+                            alt=""
+                            width="44"
+                            height="47.5"
+                            class="logo__image"
+                            loading="lazy"
+                        />
+                        <span class="logo__title">tajam</span>
+                    </a>
+                    <div class="header__overlay" data-js-header-overlay>
+                        <nav class="header__menu">
+                            <ul class="header__menu-list">
+                                <li class="header__menu-item">
+                                    <a
+                                        href="/"
+                                        class="header__menu-link is-active"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="/" class="header__menu-link"
+                                        >About</a
+                                    >
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="/" class="header__menu-link"
+                                        >Expertise</a
+                                    >
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="/" class="header__menu-link"
+                                        >Teams</a
+                                    >
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="/" class="header__menu-link"
+                                        >Works</a
+                                    >
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="/" class="header__menu-link"
+                                        >People say</a
+                                    >
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="/" class="header__menu-link"
+                                        >Contact</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button
+                        class="header__burger-button burger-button visible-mobile"
+                        aria-label="Open menu"
+                        title="Open menu"
+                        data-js-header-burger-button
+                    >
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main id="home" class="main">
+            <section class="welcome">
+                <div class="welcome__inner container">
+                    <h1 class="welcome__title underline underline--accent">
+                        We Are Awesome Creative Agency
+                    </h1>
+                    <p class="welcome__description">
+                        This is Photoshop's version of Lorem Ipsum. Proin
+                        gravida nibh vel velit auctor aliquet. Aenean
+                        sollicitudin, lorem quis bibendum auctor, nisi elit
+                        consequat ipsum, nec sagittis sem nibh id elit. Duis sed
+                        odio sit amet nibh vulputate cursus a sit amet mauris.
+                        Morbi accumsan ipsum velit.
+                    </p>
+                    <div class="welcome__link">
+                        <a href="#!" class="button">Learn more</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story content content--dark">
+                <div class="story__inner container">
+                    <div class="story__preview">
+                        <img
+                            src="/images/big-logo.svg"
+                            alt=""
+                            class="story__image"
+                            width="233"
+                            height="229"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="story__body">
+                        <h2 class="story__title">Our story</h2>
+                        <div class="story__description">
+                            <p>
+                                This is Photoshop's version of Lorem Ipsum.
+                                Proin gravida nibh vel velit auctor aliquet.
+                                Aenean sollicitudin, lorem quis bibendum auctor,
+                                nisi elit consequat ipsum, nec sagittis sem nibh
+                                id elit. Duis sed odio sit amet nibh vulputate
+                                cursus
+                            </p>
+                            <p>
+                                Morbi accumsan ipsum velit. Nam nec tellus a
+                                odio tincidunt auctor a ornare odio. Sed non
+                                mauris vitae erat consequat auctor eu in elit.
+                                Class aptent taciti sociosqu ad litora torquent
+                                per conubia nostra, per inceptos himenaeos.
+                            </p>
+                        </div>
+                        <div class="story__link">
+                            <a href="#!" class="button">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story__watch">
+                <div class="container content content--light">
+                    <a href="/" class="story__play">
+                        <img
+                            src="./icons/play-button.svg"
+                            alt="play button"
+                            class="story__play-button"
+                            width="97"
+                            height="97"
+                            loading="lazy"
+                        />
+                        <h3 class="story__play-link">Watch our story</h3>
+                    </a>
+                </div>
+            </section>
+
+            <section class="expertise content content--dark">
+                <div class="expertise__inner container">
+                    <div class="expertise__header">
+                        <h2 class="expertise__title">Expertise</h2>
+                        <p
+                            class="expertise__subtitle underline underline--gray"
+                        >
+                            Lorem ipsum dolor sit amet proin gravida nibh vel
+                            velit
+                        </p>
+                    </div>
+                    <div class="expertise__body">
+                        <h3 class="visually-hidden">Expertise features</h3>
+                        <ul class="expertise__list">
+                            <li class="expertise__item">
+                                <img
+                                    src="./images/expertise/1.jpg"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                    class="expertise__item-image"
+                                    loading="lazy"
+                                />
+                                <h4 class="expertise__item-title">
+                                    Web design & development
+                                </h4>
+                                <p class="expertise__item-description">
+                                    This is Photoshop's version of Lorem Ipsum.
+                                    Proin gravida nibh vel velit auctor aliquet
+                                    Aenean.
+                                </p>
+                            </li>
+                            <li class="expertise__item">
+                                <img
+                                    src="./images/expertise/2.jpg"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                    class="expertise__item-image"
+                                    loading="lazy"
+                                />
+                                <h4 class="expertise__item-title">
+                                    Branding identity
+                                </h4>
+                                <p class="expertise__item-description">
+                                    This is Photoshop's version of Lorem Ipsum.
+                                    Proin gravida nibh vel velit auctor aliquet
+                                    Aenean.
+                                </p>
+                            </li>
+                            <li class="expertise__item">
+                                <img
+                                    src="./images/expertise/3.jpg"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                    class="expertise__item-image"
+                                    loading="lazy"
+                                />
+                                <h4 class="expertise__item-title">
+                                    Mobile app
+                                </h4>
+                                <p class="expertise__item-description">
+                                    This is Photoshop's version of Lorem Ipsum.
+                                    Proin gravida nibh vel velit auctor aliquet
+                                    Aenean.
+                                </p>
+                            </li>
+                            <li class="expertise__item">
+                                <img
+                                    src="./images/expertise/4.jpg"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                    class="expertise__item-image"
+                                    loading="lazy"
+                                />
+                                <h4 class="expertise__item-title">
+                                    Search engine optimization
+                                </h4>
+                                <p class="expertise__item-description">
+                                    This is Photoshop's version of Lorem Ipsum.
+                                    Proin gravida nibh vel velit auctor aliquet
+                                    Aenean.
+                                </p>
+                            </li>
+                            <li class="expertise__item">
+                                <img
+                                    src="./images/expertise/5.jpg"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                    class="expertise__item-image"
+                                    loading="lazy"
+                                />
+                                <h4 class="expertise__item-title">
+                                    Game development
+                                </h4>
+                                <p class="expertise__item-description">
+                                    This is Photoshop's version of Lorem Ipsum.
+                                    Proin gravida nibh vel velit auctor aliquet
+                                    Aenean.
+                                </p>
+                            </li>
+                            <li class="expertise__item">
+                                <img
+                                    src="./images/expertise/6.jpg"
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                    class="expertise__item-image"
+                                    loading="lazy"
+                                />
+                                <h4 class="expertise__item-title">
+                                    Made with love
+                                </h4>
+                                <p class="expertise__item-description">
+                                    This is Photoshop's version of Lorem Ipsum.
+                                    Proin gravida nibh vel velit auctor aliquet
+                                    Aenean.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team content content--light">
+                <div class="team__inner container">
+                    <div class="team__header">
+                        <h2 class="team__title">Meet our amazing team</h2>
+                        <p class="team__subtitle underline underline--white">
+                            Lorem ipsum dolor sit amet proin gravida nibh vel
+                            velit
+                        </p>
+                    </div>
+                    <div class="team__body">
+                        <h3 class="visually-hidden">Teammates</h3>
+                        <ul class="team__list">
+                            <li class="team__item">
+                                <div class="team__item-avatar">
+                                    <img
+                                        src="./images/team/1.jpg"
+                                        alt="person avatar 1"
+                                        width="220"
+                                        height="230"
+                                        class="team__item-image"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="team__item-info">
+                                    <h4 class="team__item-name">
+                                        Charlie Hunnam
+                                    </h4>
+                                    <span class="team__item-position"
+                                        >CEO & Founder
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <div class="team__item-avatar">
+                                    <img
+                                        src="./images/team/2.jpg"
+                                        alt="person avatar 2"
+                                        width="220"
+                                        height="230"
+                                        class="team__item-image"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="team__item-info">
+                                    <h4 class="team__item-name">
+                                        Matthew McConaughey
+                                    </h4>
+                                    <span class="team__item-position"
+                                        >Engineering
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <div class="team__item-avatar">
+                                    <img
+                                        src="./images/team/3.jpg"
+                                        alt="person avatar 3"
+                                        width="220"
+                                        height="230"
+                                        class="team__item-image"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="team__item-info">
+                                    <h4 class="team__item-name">
+                                        Colin Farrell
+                                    </h4>
+                                    <span class="team__item-position"
+                                        >Designer
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <div class="team__item-avatar">
+                                    <img
+                                        src="./images/team/4.jpg"
+                                        alt="person avatar 4"
+                                        width="220"
+                                        height="230"
+                                        class="team__item-image"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="team__item-info">
+                                    <h4 class="team__item-name">Hugh Grant</h4>
+                                    <span class="team__item-position"
+                                        >Marketing
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="team__footer">
+                        <p class="team__invite">
+                            Become part of our dream team, let’s join us !
+                        </p>
+                        <div class="team__link">
+                            <a href="#!" class="button">We are hiring</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery content content--dark">
+                <div class="gallery__inner container">
+                    <div class="gallery__header">
+                        <h2 class="gallery__title">Our work</h2>
+                        <a class="gallery__dribble-link">
+                            See All Project in dribbble
+                            <svg
+                                width="8"
+                                height="14"
+                                viewBox="0 0 8 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M1 1L7 7L1 13"
+                                    stroke="#413D4B"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="gallery__body">
+                    <ul class="gallery__list">
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/1.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/2.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/3.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/4.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/5.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/6.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/7.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/8.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/9.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/10.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/11.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                        <li class="gallery__item">
+                            <img
+                                src="/images/gallery/12.jpg"
+                                alt=""
+                                width="266"
+                                height="200"
+                                class="gallery__item-image"
+                                loading="lazy"
+                            />
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="gallery__inner container">
+                    <div class="gallery__footer">
+                        <div class="gallery__link">
+                            <a href="#!" class="button">Load more </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews">
+                <div class="reviews__inner container">
+                    <div class="reviews__header">
+                        <h2 class="visually-hidden">Reviews about us</h2>
+                        <span class="reviews__quotes">“</span>
+                    </div>
+                    <div class="reviews__body">
+                        <div class="reviews__carousel">
+                            <p class="reviews__text">
+                                This is Photoshop's version of Lorem Ipsum.
+                                Proin gravida nibh vel velit auctor aliquet.
+                                Aenean sollicitudin, lorem quis bibendum auctor,
+                                nisi elit consequat ipsum, nec sagittis sem nibh
+                                id elit. Duis sed odio sit amet nibh vulputate
+                                cursus a sit amet mauris. Morbi accumsan ipsum
+                                velit. Nam nec tellus a odio tincidunt auctor a
+                                ornare odio. Sed non mauris vitae erat consequat
+                                auctor eu in elit.
+                            </p>
+                            <div class="reviews__author">
+                                <h4 class="reviews__author-name">
+                                    Jane galadriel
+                                </h4>
+                                <span class="reviews__author-position"
+                                    >CEO Tengkurep</span
+                                >
+                            </div>
+                        </div>
+                        <div class="reviews__controls">
+                            <ul class="reviews__controls-list">
+                                <li class="reviews__controls-item">
+                                    <img
+                                        src="./images/reviews/1.jpg"
+                                        alt="person avatar 1"
+                                        width="46"
+                                        height="46"
+                                        class="reviews__controls-image"
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="reviews__controls-item">
+                                    <img
+                                        src="./images/reviews/2.jpg"
+                                        alt="person avatar 2"
+                                        width="46"
+                                        height="46"
+                                        class="reviews__controls-image"
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="reviews__controls-item is-active">
+                                    <img
+                                        src="./images/reviews/3.jpg"
+                                        alt="person avatar 3"
+                                        width="46"
+                                        height="46"
+                                        class="reviews__controls-image"
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="reviews__controls-item">
+                                    <img
+                                        src="./images/reviews/4.jpg"
+                                        alt="person avatar 4"
+                                        width="46"
+                                        height="46"
+                                        class="reviews__controls-image"
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="reviews__controls-item">
+                                    <img
+                                        src="./images/reviews/5.jpg"
+                                        alt="person avatar 5"
+                                        width="46"
+                                        height="46"
+                                        class="reviews__controls-image"
+                                        loading="lazy"
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>

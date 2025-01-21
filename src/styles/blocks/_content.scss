@@ -1,0 +1,11 @@
+@use "../helpers/" as *;
+
+.content {
+    &--dark {
+        color: var(--color-gray-purple);
+    }
+
+    &--light {
+        color: var(--color-light);
+    }
+}

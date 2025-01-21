@@ -1,0 +1,33 @@
+@use "../helpers/" as *;
+
+.underline {
+    position: relative;
+
+    &::after {
+        content: "";
+        bottom: rem(-18);
+        display: block;
+        height: rem(2);
+        width: rem(48);
+
+        @include abs-x;
+    }
+
+    &--accent {
+        &::after {
+            background-color: var(--color-accent-1);
+        }
+    }
+
+    &--gray {
+        &::after {
+            background-color: var(--color-gray-light);
+        }
+    }
+
+    &--white {
+        &::after {
+            background-color: rgb(255, 255, 255, 0.2);
+        }
+    }
+}
