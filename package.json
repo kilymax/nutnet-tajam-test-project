@@ -1,17 +1,21 @@
 {
-  "name": "tajam",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^6.0.5"
-  },
-  "dependencies": {
-    "sass": "^1.83.4"
-  }
+    "name": "tajam",
+    "homepage": "https://kilymax.github.io/nutnet-tajam-test-project/",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
+    },
+    "devDependencies": {
+        "vite": "^6.0.5"
+    },
+    "dependencies": {
+        "gh-pages": "^6.3.0",
+        "sass": "^1.83.4"
+    }
 }
