@@ -1,13 +1,10 @@
 @use "../helpers/" as *;
 
 .gallery {
-    &__inner {
-    }
-
     &__header {
         display: flex;
         justify-content: space-between;
-        padding-block: rem(65);
+        padding-block: fluid(65, 32);
     }
 
     &__dribble-link {
@@ -34,7 +31,11 @@
 
     &__item {
         width: rem(266);
-        height: rem(200);
+        aspect-ratio: 1.33;
+
+        @include mobile {
+            width: rem(200);
+        }
 
         &-image {
             width: 100%;
@@ -45,9 +46,6 @@
     &__footer {
         display: flex;
         justify-content: center;
-        padding-block: rem(69);
-    }
-
-    &__link {
+        padding-block: fluid(69, 34);
     }
 }

@@ -1,0 +1,38 @@
+@use "../helpers" as *;
+
+.exit-button {
+    @include square(rem(34));
+
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(10) rem(4.25);
+    color: var(--color-gray-dark);
+    background-color: transparent;
+    border: none;
+
+    @include hover {
+        color: var(--color-accent-1);
+    }
+
+    &__line {
+        position: absolute;
+        width: 100%;
+        height: rem(2);
+        background-color: currentColor;
+        border-radius: 1rem;
+        transition-duration: var(--transition-duration);
+
+        &:first-child {
+            rotate: 45deg;
+            transform-origin: 0;
+            translate: 0.07em -0.5em;
+        }
+
+        &:last-child {
+            rotate: -45deg;
+            translate: -0.3em 0.38em;
+        }
+    }
+}

@@ -7,7 +7,7 @@
     justify-content: center;
     color: var(--color-white);
     text-align: center;
-    padding-block: 195px;
+    padding-block: fluid(195, 97);
 
     @include background-gradient("/images/welcome-bg.jpg");
 
@@ -23,8 +23,13 @@
 
     &__description {
         max-width: rem(780);
+        font-weight: 300;
         line-height: 1.8;
         margin-bottom: rem(52);
+
+        @include mobile {
+            margin-bottom: rem(28);
+        }
     }
 
     &__links {

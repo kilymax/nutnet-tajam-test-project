@@ -2,24 +2,42 @@
 
 .story {
     &__inner {
-        display: flex;
+        display: grid;
+        grid-template-columns: 40% auto;
+        gap: rem(10);
 
-        padding-block: fluid(70, 20);
+        padding-block: fluid(70, 35);
+
+        @include mobile {
+            grid-template-columns: auto;
+            justify-content: center;
+        }
     }
 
     &__preview {
-        width: 100%;
-        padding-inline: rem(10);
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
     }
 
     &__image {
+        width: 100%;
+        max-width: rem(233);
+        aspect-ratio: 1.017;
+
+        @include mobile {
+            max-width: rem(160);
+        }
     }
 
     &__body {
         max-width: rem(540);
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__title {
@@ -27,14 +45,11 @@
     }
 
     &__description {
-    }
-
-    &__link {
+        font-weight: 300;
+        letter-spacing: 0.03em;
     }
 
     &__watch {
-        position: relative;
-        min-height: rem(550);
         @include background-gradient("/images/story-bg.jpg");
     }
 
@@ -42,13 +57,47 @@
         flex-direction: column;
         align-items: center;
         row-gap: rem(37);
+        padding-block: fluid(197, 98) fluid(190, 95);
 
-        @include abs-center;
+        @include flex-center;
+    }
 
-        &-button {
+    &__overlay {
+        padding: rem(16);
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000, $alpha: 0.85);
+        transition-duration: var(--transition-duration);
+
+        &:not(.is-active) {
+            @include hide;
         }
+    }
 
-        &-link {
+    &__modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        row-gap: rem(24);
+        padding: rem(24) rem(24);
+        background-color: var(--color-light);
+        border-radius: rem(10);
+
+        .rutube-iframe {
+            width: 100%;
+            aspect-ratio: 1.78;
         }
+    }
+
+    &__exit-button {
+        align-self: flex-end;
     }
 }

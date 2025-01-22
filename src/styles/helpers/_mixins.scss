@@ -7,7 +7,8 @@
 
 @mixin hide {
     opacity: 0;
-    visibility: hidden;
+    display: none;
+    transition-duration: var(--transition-duration);
 }
 
 @mixin show {

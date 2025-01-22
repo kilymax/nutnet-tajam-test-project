@@ -9,6 +9,10 @@
         width: 100vw;
         padding-block: rem(15) rem(17.5);
 
+        @include mobile {
+            padding-block: rem(8);
+        }
+
         &-inner {
             display: flex;
             justify-content: space-between;
@@ -49,6 +53,7 @@
         color: var(--color-light);
         font-weight: 900;
         font-size: rem(13);
+        text-transform: uppercase;
 
         @include mobile {
             overflow-y: auto;
@@ -59,8 +64,8 @@
             align-items: center;
             column-gap: rem(6);
 
-            @include laptop {
-                column-gap: rem(6);
+            @include tablet {
+                column-gap: rem(2);
             }
 
             @include mobile {

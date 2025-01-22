@@ -1,42 +1,57 @@
 @use "../helpers/" as *;
 
 .team {
-    min-height: rem(712);
+    // min-height: rem(712);
 
     @include background-gradient("/images/team-bg.jpg");
 
     &__inner {
-        padding-block: rem(62) rem(67);
+        padding-block: fluid(62, 31) fluid(67, 33);
     }
 
     &__header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: rem(67);
+        margin-bottom: fluid(67, 33);
         row-gap: rem(10);
     }
 
     &__subtitle {
         font-family: var(--font-family-accent);
-        font-weight: 400;
         letter-spacing: 0.07em;
+        text-align: center;
     }
 
     &__body {
-        margin-bottom: rem(64);
+        margin-bottom: fluid(64, 32);
     }
 
     &__list {
         display: grid;
+        margin-inline: auto;
         grid-template-columns: repeat(4, 1fr);
         gap: rem(20);
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: fit-content;
+            gap: rem(24);
+        }
+
+        @include mobile {
+            gap: rem(12);
+        }
     }
 
     &__item {
         &-avatar {
             width: rem(220);
-            height: rem(230);
+            aspect-ratio: 0.955;
+
+            @include mobile-s {
+                width: 100%;
+            }
         }
 
         &-image {
@@ -77,8 +92,5 @@
     &__invite {
         font-weight: 300;
         line-height: 1.8;
-    }
-
-    &__link {
     }
 }

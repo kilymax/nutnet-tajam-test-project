@@ -1,4 +1,4 @@
-# Проект Tajam (естовое задание Nutnet)
+# Проект Tajam (тестовое задание Nutnet)
 
 <a name="readme-top"></a>
 
