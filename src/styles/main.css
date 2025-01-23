@@ -421,9 +421,9 @@ button[aria-label]::before {
   position: absolute;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 .header__body {
-  width: 100vw;
   padding-block: 0.9375rem 1.09375rem;
 }
 @media (width <= 47.99875rem) {
@@ -1078,6 +1078,7 @@ button[aria-label]::before {
        column-gap: 0.8125rem;
 }
 .reviews__controls-item {
+  cursor: pointer;
   width: 46px;
   height: 46px;
 }

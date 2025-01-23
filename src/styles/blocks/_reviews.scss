@@ -82,6 +82,7 @@
         }
 
         &-item {
+            cursor: pointer;
             @include square(46px);
         }
 

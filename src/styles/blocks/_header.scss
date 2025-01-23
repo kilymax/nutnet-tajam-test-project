@@ -4,9 +4,9 @@
     position: absolute;
     top: 0;
     z-index: 100;
+    width: 100%;
 
     &__body {
-        width: 100vw;
         padding-block: rem(15) rem(17.5);
 
         @include mobile {
