@@ -63,6 +63,7 @@
     }
 
     &__overlay {
+        z-index: 110;
         padding: rem(16);
         display: flex;
         position: fixed;
@@ -91,10 +92,16 @@
         background-color: var(--color-light);
         border-radius: rem(10);
 
-        .rutube-iframe {
-            width: 100%;
+        #rutube-iframe {
             aspect-ratio: 1.78;
         }
+    }
+
+    &__player {
+        height: 60vw;
+        max-width: 1066px;
+        max-height: 600px;
+        min-height: 240px;
     }
 
     &__exit-button {

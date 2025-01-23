@@ -32,9 +32,25 @@
 
     &__carousel {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        row-gap: fluid(44, 22);
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            row-gap: fluid(44, 22);
+
+            &:not(.is-active) {
+                translate: 200%;
+
+                @include hide;
+            }
+        }
+    }
+
+    &__review-wrapper {
+        display: flex;
+        align-items: center;
     }
 
     &__text {
@@ -65,15 +81,17 @@
             column-gap: rem(13);
         }
 
+        &-item {
+            @include square(46px);
+        }
+
         &-image {
             border-radius: 50%;
-            width: 100%;
-            height: 100%;
+            @include square(100%);
         }
 
         .is-active {
-            width: rem(70);
-            height: rem(70);
+            @include square(70px);
         }
     }
 }

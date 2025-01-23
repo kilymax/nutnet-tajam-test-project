@@ -22,8 +22,7 @@ class Story {
             this.selectors.overlay,
         );
 
-        this.playerElement =
-            this.rootElement.getElementsByClassName("rutube-iframe");
+        this.playerElement = document.getElementById("rutube-iframe");
 
         this.exitButtonElement = this.rootElement.querySelector(
             this.selectors.exitButton,
@@ -35,20 +34,19 @@ class Story {
     onPlayButtonClick = () => {
         this.overlayElement.classList.add(this.stateClasses.isActive);
         document.documentElement.classList.add(this.stateClasses.isLock);
-        this.doPlayerCommand({ type: "player:play", data: {} });
+        // this.playerElement.contentWindow.postMessage(
+        //     JSON.stringify({ type: "player:play", data: {} }),
+        //     "*",
+        // );
     };
 
     onOverlayExit = () => {
         this.overlayElement.classList.remove(this.stateClasses.isActive);
         document.documentElement.classList.remove(this.stateClasses.isLock);
-        this.doPlayerCommand({});
-    };
-
-    doPlayerCommand = (commandJSON) => {
-        // this.playerElement.contentWindow.postMessage(
-        //     JSON.stringify({ commandJSON }),
-        // );
-        console.log("yes");
+        this.playerElement.contentWindow.postMessage(
+            JSON.stringify({ type: "player:pause", data: {} }),
+            "*",
+        );
     };
 
     bindEvents() {

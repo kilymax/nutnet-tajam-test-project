@@ -463,7 +463,7 @@ button[aria-label]::before {
   .header__overlay:not(.is-active) {
     opacity: 0;
     display: none;
-    transition-duration: var(--transition-duration);
+    visibility: hidden;
     translate: 100%;
   }
 }
@@ -727,6 +727,7 @@ button[aria-label]::before {
   align-items: center;
 }
 .story__overlay {
+  z-index: 110;
   padding: 1rem;
   display: flex;
   position: fixed;
@@ -743,7 +744,7 @@ button[aria-label]::before {
 .story__overlay:not(.is-active) {
   opacity: 0;
   display: none;
-  transition-duration: var(--transition-duration);
+  visibility: hidden;
 }
 .story__modal {
   display: flex;
@@ -756,9 +757,14 @@ button[aria-label]::before {
   background-color: var(--color-light);
   border-radius: 0.625rem;
 }
-.story__modal .rutube-iframe {
-  width: 100%;
+.story__modal #rutube-iframe {
   aspect-ratio: 1.78;
+}
+.story__player {
+  height: 60vw;
+  max-width: 1066px;
+  max-height: 600px;
+  min-height: 240px;
 }
 .story__exit-button {
   align-self: flex-end;
@@ -906,6 +912,9 @@ button[aria-label]::before {
     gap: 0.75rem;
   }
 }
+.team__item {
+  height: 100%;
+}
 .team__item-avatar {
   width: 13.75rem;
   aspect-ratio: 0.955;
@@ -921,6 +930,7 @@ button[aria-label]::before {
 }
 .team__item-info {
   display: flex;
+  padding-inline: 0.25rem;
   flex-direction: column;
   justify-content: center;
   padding-block: 1.1875rem 1.375rem;
@@ -1025,9 +1035,23 @@ button[aria-label]::before {
 }
 .reviews__carousel {
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+.reviews__carousel-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   row-gap: clamp(1.375rem, 0.9758064516rem + 1.7741935484vw, 2.75rem);
+}
+.reviews__carousel-item:not(.is-active) {
+  translate: 200%;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+}
+.reviews__review-wrapper {
+  display: flex;
+  align-items: center;
 }
 .reviews__text {
   text-align: center;
@@ -1053,14 +1077,18 @@ button[aria-label]::before {
   -moz-column-gap: 0.8125rem;
        column-gap: 0.8125rem;
 }
+.reviews__controls-item {
+  width: 46px;
+  height: 46px;
+}
 .reviews__controls-image {
   border-radius: 50%;
   width: 100%;
   height: 100%;
 }
 .reviews__controls .is-active {
-  width: 4.375rem;
-  height: 4.375rem;
+  width: 70px;
+  height: 70px;
 }
 
 .input {

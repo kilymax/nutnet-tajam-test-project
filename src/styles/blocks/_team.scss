@@ -45,6 +45,8 @@
     }
 
     &__item {
+        height: 100%;
+
         &-avatar {
             width: rem(220);
             aspect-ratio: 0.955;
@@ -61,6 +63,7 @@
 
         &-info {
             display: flex;
+            padding-inline: rem(4);
             flex-direction: column;
             justify-content: center;
             padding-block: rem(19) rem(22);
