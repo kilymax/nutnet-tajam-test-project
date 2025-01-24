@@ -1,8 +1,6 @@
 @use "../helpers/" as *;
 
 .team {
-    // min-height: rem(712);
-
     @include background-gradient("/images/team-bg.jpg");
 
     &__inner {

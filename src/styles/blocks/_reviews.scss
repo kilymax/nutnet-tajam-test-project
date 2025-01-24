@@ -49,7 +49,7 @@
     &__review-wrapper {
         display: flex;
         align-items: center;
-        animation: fade 0.7s;
+        animation: emersion 0.7s;
     }
 
     &__text {
@@ -96,7 +96,7 @@
     }
 }
 
-@keyframes fade {
+@keyframes emersion {
     0% {
         opacity: 0;
         translate: 8%;

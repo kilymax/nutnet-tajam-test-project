@@ -506,7 +506,6 @@ button[aria-label]::before {
 }
 
 .welcome {
-  max-height: 41.875rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -541,7 +540,7 @@ button[aria-label]::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 @media (width <= 29.99875rem) {
   .welcome__links {
@@ -1055,7 +1054,7 @@ button[aria-label]::before {
 .reviews__review-wrapper {
   display: flex;
   align-items: center;
-  animation: fade 0.7s;
+  animation: emersion 0.7s;
 }
 .reviews__text {
   text-align: center;
@@ -1096,7 +1095,7 @@ button[aria-label]::before {
   height: 70px;
 }
 
-@keyframes fade {
+@keyframes emersion {
   0% {
     opacity: 0;
     translate: 8%;

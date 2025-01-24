@@ -1,49 +1,48 @@
 @use "../helpers/" as *;
 
 .welcome {
-    max-height: rem(670);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  text-align: center;
+  padding-block: fluid(195, 97);
+
+  @include background-gradient("/images/welcome-bg.jpg");
+
+  &__inner {
     display: flex;
-    align-items: center;
+    min-height: rem(242);
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: rem(40);
+  }
+
+  &__description {
+    max-width: rem(780);
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: rem(52);
+
+    @include mobile {
+      margin-bottom: rem(28);
+    }
+  }
+
+  &__links {
+    display: flex;
     justify-content: center;
-    color: var(--color-white);
-    text-align: center;
-    padding-block: fluid(195, 97);
+    align-items: center;
+    gap: rem(20);
 
-    @include background-gradient("/images/welcome-bg.jpg");
+    @include mobile-s {
+      flex-direction: column;
 
-    &__inner {
-        display: flex;
-        min-height: rem(242);
-        flex-direction: column;
+      .link {
+        width: 80%;
+      }
     }
-
-    &__title {
-        margin-bottom: rem(40);
-    }
-
-    &__description {
-        max-width: rem(780);
-        font-weight: 300;
-        line-height: 1.8;
-        margin-bottom: rem(52);
-
-        @include mobile {
-            margin-bottom: rem(28);
-        }
-    }
-
-    &__links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-        @include mobile-s {
-            flex-direction: column;
-
-            .link {
-                width: 80%;
-            }
-        }
-    }
+  }
 }
