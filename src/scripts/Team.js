@@ -5,21 +5,25 @@ class Team {
         number: "1",
         name: "Mickey Pearson",
         position: "CEO & Founder",
+        image_path: "/images/team/1.jpg",
       },
       {
         number: "2",
         name: "Raymond Smith",
         position: "Engineering",
+        image_path: "/images/team/2.jpg",
       },
       {
         number: "3",
         name: "Coach",
         position: "Designer",
+        image_path: "/images/team/3.jpg",
       },
       {
         number: "4",
         name: "Fletcher",
         position: "Marketing",
+        image_path: "/images/team/4.jpg",
       },
     ],
   };

@@ -10,7 +10,6 @@
     />
     <link rel="stylesheet" href="/src/styles/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script src="/src/scripts/team_handlebars.js"></script>
     <script src="./src/scripts/main.js" type="module" defer></script>
   </head>
   <body>
@@ -190,7 +189,7 @@
             </button>
 
             <div class="story__player">
-              <!-- <iframe
+              <iframe
                 id="rutube-iframe"
                 width="100%"
                 height="100%"
@@ -200,7 +199,7 @@
                 webkitAllowFullScreen
                 mozallowfullscreen
                 allowfullscreen
-              ></iframe> -->
+              ></iframe>
             </div>
           </div>
         </div>
@@ -329,7 +328,7 @@
                 <li class="team__item">
                   <div class="team__item-avatar">
                     <img
-                      src="/images/team/{{this.number}}.jpg"
+                      src="{{this.image_path}}"
                       alt="person avatar {{this.number}}"
                       width="220"
                       height="230"
@@ -344,73 +343,7 @@
                 </li>
               {{/each}}
             </script>
-            <ul class="team__list" id="team__list">
-              <!-- <li class="team__item">
-                <div class="team__item-avatar">
-                  <img
-                    src="/images/team/1.jpg"
-                    alt="person avatar 1"
-                    width="220"
-                    height="230"
-                    class="team__item-image"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="team__item-info">
-                  <h4 class="team__item-name">Mickey Pearson</h4>
-                  <span class="team__item-position">CEO & Founder </span>
-                </div>
-              </li> -->
-              <!-- 
-              <li class="team__item">
-                <div class="team__item-avatar">
-                  <img
-                    src="/images/team/2.jpg"
-                    alt="person avatar 2"
-                    width="220"
-                    height="230"
-                    class="team__item-image"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="team__item-info">
-                  <h4 class="team__item-name">Raymond Smith</h4>
-                  <span class="team__item-position">Engineering </span>
-                </div>
-              </li>
-              <li class="team__item">
-                <div class="team__item-avatar">
-                  <img
-                    src="/images/team/3.jpg"
-                    alt="person avatar 3"
-                    width="220"
-                    height="230"
-                    class="team__item-image"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="team__item-info">
-                  <h4 class="team__item-name">Coach</h4>
-                  <span class="team__item-position">Designer</span>
-                </div>
-              </li>
-              <li class="team__item">
-                <div class="team__item-avatar">
-                  <img
-                    src="/images/team/4.jpg"
-                    alt="person avatar 4"
-                    width="220"
-                    height="230"
-                    class="team__item-image"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="team__item-info">
-                  <h4 class="team__item-name">Fletcher</h4>
-                  <span class="team__item-position">Marketing</span>
-                </div>
-              </li> -->
-            </ul>
+            <ul class="team__list" id="team__list"></ul>
           </div>
           <div class="team__footer">
             <p class="team__invite">
@@ -819,6 +752,7 @@
                   minlength="3"
                   maxlength="800"
                   aria-errormessage="message-errors"
+                  data-js-form-textarea
                 ></textarea>
 
                 <span

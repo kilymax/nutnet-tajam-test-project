@@ -2,16 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/nutnet-tajam-test-project/icons/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/icons/logo.svg" />
     <title>Tajam</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script src="/src/scripts/team_handlebars.js"></script>
-    <script type="module" crossorigin src="/nutnet-tajam-test-project/assets/index-urz-KA4B.js"></script>
-    <link rel="stylesheet" crossorigin href="/nutnet-tajam-test-project/assets/index-XtE9F9D5.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script type="module" crossorigin src="/assets/index-BXlFR7yx.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cv37xVlD.css">
   </head>
   <body>
     <header class="header" data-js-header>
@@ -19,7 +18,7 @@
         <div class="header__body-inner container">
           <a href="/" class="header__logo logo" aria-label="Home" title="Home">
             <img
-              src="/nutnet-tajam-test-project/icons/logo.svg"
+              src="/icons/logo.svg"
               alt=""
               width="44"
               height="47.5"
@@ -127,7 +126,7 @@
         <div class="story__inner container">
           <div class="story__preview">
             <img
-              src="/nutnet-tajam-test-project/images/big-logo.svg"
+              src="/images/big-logo.svg"
               alt=""
               class="story__image"
               width="233"
@@ -190,7 +189,7 @@
             </button>
 
             <div class="story__player">
-              <!-- <iframe
+              <iframe
                 id="rutube-iframe"
                 width="100%"
                 height="100%"
@@ -200,7 +199,7 @@
                 webkitAllowFullScreen
                 mozallowfullscreen
                 allowfullscreen
-              ></iframe> -->
+              ></iframe>
             </div>
           </div>
         </div>
@@ -219,7 +218,7 @@
             <ul class="expertise__list">
               <li class="expertise__item">
                 <img
-                  src="/nutnet-tajam-test-project/images/expertise/1.jpg"
+                  src="/images/expertise/1.jpg"
                   width="50"
                   height="50"
                   alt=""
@@ -234,7 +233,7 @@
               </li>
               <li class="expertise__item">
                 <img
-                  src="/nutnet-tajam-test-project/images/expertise/1.jpg"
+                  src="/images/expertise/1.jpg"
                   width="50"
                   height="50"
                   alt=""
@@ -249,7 +248,7 @@
               </li>
               <li class="expertise__item">
                 <img
-                  src="/nutnet-tajam-test-project/images/expertise/3.jpg"
+                  src="/images/expertise/3.jpg"
                   width="50"
                   height="50"
                   alt=""
@@ -264,7 +263,7 @@
               </li>
               <li class="expertise__item">
                 <img
-                  src="/nutnet-tajam-test-project/images/expertise/4.jpg"
+                  src="/images/expertise/4.jpg"
                   width="50"
                   height="50"
                   alt=""
@@ -281,7 +280,7 @@
               </li>
               <li class="expertise__item">
                 <img
-                  src="/nutnet-tajam-test-project/images/expertise/5.jpg"
+                  src="/images/expertise/5.jpg"
                   width="50"
                   height="50"
                   alt=""
@@ -296,7 +295,7 @@
               </li>
               <li class="expertise__item">
                 <img
-                  src="/nutnet-tajam-test-project/images/expertise/6.jpg"
+                  src="/images/expertise/6.jpg"
                   width="50"
                   height="50"
                   alt=""
@@ -329,8 +328,8 @@
                 <li class="team__item">
                   <div class="team__item-avatar">
                     <img
-                      src={{image_path}}
-                      alt="person avatar {{number}}"
+                      src="{{this.image_path}}"
+                      alt="person avatar {{this.number}}"
                       width="220"
                       height="230"
                       class="team__item-image"
@@ -344,73 +343,7 @@
                 </li>
               {{/each}}
             </script>
-            <ul class="team__list" id="team__list">
-              <!-- <li class="team__item">
-                <div class="team__item-avatar">
-                  <img
-                    src="/images/team/1.jpg"
-                    alt="person avatar 1"
-                    width="220"
-                    height="230"
-                    class="team__item-image"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="team__item-info">
-                  <h4 class="team__item-name">Mickey Pearson</h4>
-                  <span class="team__item-position">CEO & Founder </span>
-                </div>
-              </li> -->
-              <!-- 
-              <li class="team__item">
-                <div class="team__item-avatar">
-                  <img
-                    src="/images/team/2.jpg"
-                    alt="person avatar 2"
-                    width="220"
-                    height="230"
-                    class="team__item-image"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="team__item-info">
-                  <h4 class="team__item-name">Raymond Smith</h4>
-                  <span class="team__item-position">Engineering </span>
-                </div>
-              </li>
-              <li class="team__item">
-                <div class="team__item-avatar">
-                  <img
-                    src="/images/team/3.jpg"
-                    alt="person avatar 3"
-                    width="220"
-                    height="230"
-                    class="team__item-image"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="team__item-info">
-                  <h4 class="team__item-name">Coach</h4>
-                  <span class="team__item-position">Designer</span>
-                </div>
-              </li>
-              <li class="team__item">
-                <div class="team__item-avatar">
-                  <img
-                    src="/images/team/4.jpg"
-                    alt="person avatar 4"
-                    width="220"
-                    height="230"
-                    class="team__item-image"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="team__item-info">
-                  <h4 class="team__item-name">Fletcher</h4>
-                  <span class="team__item-position">Marketing</span>
-                </div>
-              </li> -->
-            </ul>
+            <ul class="team__list" id="team__list"></ul>
           </div>
           <div class="team__footer">
             <p class="team__invite">
@@ -452,7 +385,7 @@
           <ul class="gallery__list">
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/1.jpg"
+                src="/images/gallery/1.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -462,7 +395,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/2.jpg"
+                src="/images/gallery/2.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -472,7 +405,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/3.jpg"
+                src="/images/gallery/3.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -482,7 +415,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/4.jpg"
+                src="/images/gallery/4.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -492,7 +425,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/5.jpg"
+                src="/images/gallery/5.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -502,7 +435,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/6.jpg"
+                src="/images/gallery/6.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -512,7 +445,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/7.jpg"
+                src="/images/gallery/7.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -522,7 +455,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/8.jpg"
+                src="/images/gallery/8.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -532,7 +465,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/9.jpg"
+                src="/images/gallery/9.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -542,7 +475,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/10.jpg"
+                src="/images/gallery/10.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -552,7 +485,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/11.jpg"
+                src="/images/gallery/11.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -562,7 +495,7 @@
             </li>
             <li class="gallery__item">
               <img
-                src="/nutnet-tajam-test-project/images/gallery/12.jpg"
+                src="/images/gallery/12.jpg"
                 alt=""
                 width="266"
                 height="200"
@@ -671,7 +604,7 @@
               <ul class="reviews__controls-list" data-js-reviews-controls>
                 <li class="reviews__controls-item">
                   <img
-                    src="/nutnet-tajam-test-project/images/reviews/1.jpg"
+                    src="/images/reviews/1.jpg"
                     alt="person avatar 1"
                     width="46"
                     height="46"
@@ -681,7 +614,7 @@
                 </li>
                 <li class="reviews__controls-item">
                   <img
-                    src="/nutnet-tajam-test-project/images/reviews/2.jpg"
+                    src="/images/reviews/2.jpg"
                     alt="person avatar 2"
                     width="46"
                     height="46"
@@ -691,7 +624,7 @@
                 </li>
                 <li class="reviews__controls-item">
                   <img
-                    src="/nutnet-tajam-test-project/images/reviews/3.jpg"
+                    src="/images/reviews/3.jpg"
                     alt="person avatar 3"
                     width="46"
                     height="46"
@@ -701,7 +634,7 @@
                 </li>
                 <li class="reviews__controls-item">
                   <img
-                    src="/nutnet-tajam-test-project/images/reviews/4.jpg"
+                    src="/images/reviews/4.jpg"
                     alt="person avatar 4"
                     width="46"
                     height="46"
@@ -711,7 +644,7 @@
                 </li>
                 <li class="reviews__controls-item">
                   <img
-                    src="/nutnet-tajam-test-project/images/reviews/5.jpg"
+                    src="/images/reviews/5.jpg"
                     alt="person avatar 5"
                     width="46"
                     height="46"
@@ -819,6 +752,7 @@
                   minlength="3"
                   maxlength="800"
                   aria-errormessage="message-errors"
+                  data-js-form-textarea
                 ></textarea>
 
                 <span
@@ -848,7 +782,7 @@
               title="Home"
             >
               <img
-                src="/nutnet-tajam-test-project/icons/logo.svg"
+                src="/icons/logo.svg"
                 alt=""
                 width="44"
                 height="47.5"
@@ -868,7 +802,7 @@
             <ul class="footer__contacts-list">
               <li class="footer__contacts-item">
                 <img
-                  src="/nutnet-tajam-test-project/icons/map-mark.svg"
+                  src="/icons/map-mark.svg"
                   width="14"
                   height="19"
                   alt=""
@@ -881,7 +815,7 @@
               </li>
               <li class="footer__contacts-item">
                 <img
-                  src="/nutnet-tajam-test-project/icons/phone.svg"
+                  src="/icons/phone.svg"
                   width="16"
                   height="16"
                   alt=""

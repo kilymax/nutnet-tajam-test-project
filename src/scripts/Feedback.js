@@ -2,6 +2,7 @@ class Feedback {
   selectors = {
     form: "[data-js-form]",
     fieldErrors: "[data-js-form-field-errors]",
+    textArea: "[data-js-form-textarea]",
   };
 
   errorMessages = {
@@ -64,8 +65,6 @@ class Feedback {
   };
 
   onSubmit = (event) => {
-    event.preventDefault();
-
     const isFormElement = event.target.matches(this.selectors.form);
 
     if (!isFormElement) {
@@ -92,6 +91,7 @@ class Feedback {
 
     if (!isFormValid) {
       firstInvalidField.focus();
+      event.preventDefault();
     }
   };
 
