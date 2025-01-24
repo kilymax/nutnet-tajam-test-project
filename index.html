@@ -1,1160 +1,1067 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/icons/logo.svg" />
-        <title>Tajam</title>
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
-        <link rel="stylesheet" href="/src/styles/main.css" />
-        <script src="./src/scripts/main.js" type="module" defer></script>
-    </head>
-    <body>
-        <header class="header" data-js-header>
-            <div class="header__body">
-                <div class="header__body-inner container">
-                    <a
-                        href="/"
-                        class="header__logo logo"
-                        aria-label="Home"
-                        title="Home"
-                    >
-                        <img
-                            src="/icons/logo.svg"
-                            alt=""
-                            width="44"
-                            height="47.5"
-                            class="logo__image"
-                            loading="lazy"
-                        />
-                        <span class="logo__title">tajam</span>
-                    </a>
-                    <div class="header__overlay" data-js-header-overlay>
-                        <nav class="header__menu">
-                            <ul class="header__menu-list">
-                                <li class="header__menu-item">
-                                    <a
-                                        href="#home"
-                                        class="header__menu-link is-active"
-                                        data-js-header-menu-link
-                                        >Home</a
-                                    >
-                                </li>
-                                <li class="header__menu-item">
-                                    <a
-                                        href="#about"
-                                        class="header__menu-link"
-                                        data-js-header-menu-link
-                                        >About</a
-                                    >
-                                </li>
-                                <li class="header__menu-item">
-                                    <a
-                                        href="#expertise"
-                                        class="header__menu-link"
-                                        data-js-header-menu-link
-                                        >Expertise</a
-                                    >
-                                </li>
-                                <li class="header__menu-item">
-                                    <a
-                                        href="#teams"
-                                        class="header__menu-link"
-                                        data-js-header-menu-link
-                                        >Teams</a
-                                    >
-                                </li>
-                                <li class="header__menu-item">
-                                    <a
-                                        href="#works"
-                                        class="header__menu-link"
-                                        data-js-header-menu-link
-                                        >Works</a
-                                    >
-                                </li>
-                                <li class="header__menu-item">
-                                    <a
-                                        href="#people-say"
-                                        class="header__menu-link"
-                                        data-js-header-menu-link
-                                        >People say</a
-                                    >
-                                </li>
-                                <li class="header__menu-item">
-                                    <a
-                                        href="#contact"
-                                        class="header__menu-link"
-                                        data-js-header-menu-link
-                                        >Contact</a
-                                    >
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <button
-                        class="header__burger-button burger-button visible-mobile"
-                        aria-label="Open menu"
-                        title="Open menu"
-                        data-js-header-burger-button
-                    >
-                        <span class="burger-button__line"></span>
-                        <span class="burger-button__line"></span>
-                        <span class="burger-button__line"></span>
-                    </button>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icons/logo.svg" />
+    <title>Tajam</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="/src/scripts/team_handlebars.js"></script>
+    <script src="./src/scripts/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__body">
+        <div class="header__body-inner container">
+          <a href="/" class="header__logo logo" aria-label="Home" title="Home">
+            <img
+              src="/icons/logo.svg"
+              alt=""
+              width="44"
+              height="47.5"
+              class="logo__image"
+              loading="lazy"
+            />
+            <span class="logo__title">tajam</span>
+          </a>
+          <div class="header__overlay" data-js-header-overlay>
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a
+                    href="#home"
+                    class="header__menu-link is-active"
+                    data-js-header-menu-link
+                    >Home</a
+                  >
+                </li>
+                <li class="header__menu-item">
+                  <a
+                    href="#about"
+                    class="header__menu-link"
+                    data-js-header-menu-link
+                    >About</a
+                  >
+                </li>
+                <li class="header__menu-item">
+                  <a
+                    href="#expertise"
+                    class="header__menu-link"
+                    data-js-header-menu-link
+                    >Expertise</a
+                  >
+                </li>
+                <li class="header__menu-item">
+                  <a
+                    href="#teams"
+                    class="header__menu-link"
+                    data-js-header-menu-link
+                    >Teams</a
+                  >
+                </li>
+                <li class="header__menu-item">
+                  <a
+                    href="#works"
+                    class="header__menu-link"
+                    data-js-header-menu-link
+                    >Works</a
+                  >
+                </li>
+                <li class="header__menu-item">
+                  <a
+                    href="#people-say"
+                    class="header__menu-link"
+                    data-js-header-menu-link
+                    >People say</a
+                  >
+                </li>
+                <li class="header__menu-item">
+                  <a
+                    href="#contact"
+                    class="header__menu-link"
+                    data-js-header-menu-link
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <button
+            class="header__burger-button burger-button visible-mobile"
+            aria-label="Open menu"
+            title="Open menu"
+            data-js-header-burger-button
+          >
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="home" class="welcome">
+        <div class="welcome__inner container">
+          <h1 class="welcome__title underline underline--accent">
+            We Are Awesome Creative Agency
+          </h1>
+          <p class="welcome__description">
+            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+            velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+            auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+            Morbi accumsan ipsum velit.
+          </p>
+          <div class="welcome__link">
+            <a href="#!" class="button">Learn more</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="story content content--dark">
+        <div class="story__inner container">
+          <div class="story__preview">
+            <img
+              src="/images/big-logo.svg"
+              alt=""
+              class="story__image"
+              width="233"
+              height="229"
+              loading="lazy"
+            />
+          </div>
+          <div class="story__body">
+            <h2 class="story__title">Our story</h2>
+            <div class="story__description">
+              <p>
+                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
+                vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                nibh id elit. Duis sed odio sit amet nibh vulputate cursus
+              </p>
+              <p>
+                Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt
+                auctor a ornare odio. Sed non mauris vitae erat consequat auctor
+                eu in elit. Class aptent taciti sociosqu ad litora torquent per
+                conubia nostra, per inceptos himenaeos.
+              </p>
             </div>
-        </header>
-
-        <main class="main">
-            <section id="home" class="welcome">
-                <div class="welcome__inner container">
-                    <h1 class="welcome__title underline underline--accent">
-                        We Are Awesome Creative Agency
-                    </h1>
-                    <p class="welcome__description">
-                        This is Photoshop's version of Lorem Ipsum. Proin
-                        gravida nibh vel velit auctor aliquet. Aenean
-                        sollicitudin, lorem quis bibendum auctor, nisi elit
-                        consequat ipsum, nec sagittis sem nibh id elit. Duis sed
-                        odio sit amet nibh vulputate cursus a sit amet mauris.
-                        Morbi accumsan ipsum velit.
-                    </p>
-                    <div class="welcome__link">
-                        <a href="#!" class="button">Learn more</a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="about" class="story content content--dark">
-                <div class="story__inner container">
-                    <div class="story__preview">
-                        <img
-                            src="/images/big-logo.svg"
-                            alt=""
-                            class="story__image"
-                            width="233"
-                            height="229"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div class="story__body">
-                        <h2 class="story__title">Our story</h2>
-                        <div class="story__description">
-                            <p>
-                                This is Photoshop's version of Lorem Ipsum.
-                                Proin gravida nibh vel velit auctor aliquet.
-                                Aenean sollicitudin, lorem quis bibendum auctor,
-                                nisi elit consequat ipsum, nec sagittis sem nibh
-                                id elit. Duis sed odio sit amet nibh vulputate
-                                cursus
-                            </p>
-                            <p>
-                                Morbi accumsan ipsum velit. Nam nec tellus a
-                                odio tincidunt auctor a ornare odio. Sed non
-                                mauris vitae erat consequat auctor eu in elit.
-                                Class aptent taciti sociosqu ad litora torquent
-                                per conubia nostra, per inceptos himenaeos.
-                            </p>
-                        </div>
-                        <div class="story__link">
-                            <a href="#!" class="button">Learn more</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="story__watch" data-js-story>
-                <div class="container content content--light">
-                    <a
-                        href="javascript:;"
-                        class="story__play"
-                        data-js-story-play-button
-                    >
-                        <svg
-                            width="100"
-                            height="101"
-                            viewBox="0 0 100 101"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M38 29.5L38.7829 28.2205C38.32 27.9373 37.7401 27.9261 37.2667 28.1915C36.7932 28.4568 36.5 28.9572 36.5 29.5H38ZM38 71H36.5C36.5 71.5456 36.7963 72.0483 37.2737 72.3125C37.7512 72.5766 38.3344 72.5607 38.7967 72.2709L38 71ZM71.5 50L72.2967 51.2709C72.7367 50.9951 73.0028 50.5112 73 49.9919C72.9972 49.4726 72.7259 48.9916 72.2829 48.7206L71.5 50ZM97 50.5C97 76.4574 75.9574 97.5 50 97.5V100.5C77.6142 100.5 100 78.1142 100 50.5H97ZM50 97.5C24.0426 97.5 3 76.4574 3 50.5H0C0 78.1142 22.3858 100.5 50 100.5V97.5ZM3 50.5C3 24.5426 24.0426 3.5 50 3.5V0.5C22.3858 0.5 0 22.8858 0 50.5H3ZM50 3.5C75.9574 3.5 97 24.5426 97 50.5H100C100 22.8858 77.6142 0.5 50 0.5V3.5ZM36.5 29.5V71H39.5V29.5H36.5ZM38.7967 72.2709L72.2967 51.2709L70.7033 48.7291L37.2033 69.7291L38.7967 72.2709ZM72.2829 48.7206L38.7829 28.2205L37.2171 30.7795L70.7171 51.2794L72.2829 48.7206Z"
-                                fill="white"
-                            />
-                        </svg>
-
-                        <h3 class="story__play-link">Watch our story</h3>
-                    </a>
-                </div>
-                <div class="story__overlay" data-js-story-overlay>
-                    <div class="story__modal">
-                        <button
-                            class="story__exit-button exit-button"
-                            aria-label="Open videoplayer"
-                            title="Open videoplayer"
-                            data-js-story-exit-button
-                        >
-                            <span class="exit-button__line"></span>
-                            <span class="exit-button__line"></span>
-                        </button>
-
-                        <div class="story__player">
-                            <iframe
-                                id="rutube-iframe"
-                                width="100%"
-                                height="100%"
-                                src="https://rutube.ru/play/embed/f884aa6ed5f94120b7304506042fe5bb/"
-                                frameborder="0"
-                                allow="clipboard-write; autoplay"
-                                webkitAllowFullScreen
-                                mozallowfullscreen
-                                allowfullscreen
-                            ></iframe>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="expertise" class="expertise content content--dark">
-                <div class="expertise__inner container">
-                    <div class="expertise__header">
-                        <h2 class="expertise__title">Expertise</h2>
-                        <p
-                            class="expertise__subtitle underline underline--gray"
-                        >
-                            Lorem ipsum dolor sit amet proin gravida nibh vel
-                            velit
-                        </p>
-                    </div>
-                    <div class="expertise__body">
-                        <h3 class="visually-hidden">Expertise features</h3>
-                        <ul class="expertise__list">
-                            <li class="expertise__item">
-                                <img
-                                    src="/images/expertise/1.jpg"
-                                    width="50"
-                                    height="50"
-                                    alt=""
-                                    class="expertise__item-image"
-                                    loading="lazy"
-                                />
-                                <h4 class="expertise__item-title">
-                                    Web design & development
-                                </h4>
-                                <p class="expertise__item-description">
-                                    This is Photoshop's version of Lorem Ipsum.
-                                    Proin gravida nibh vel velit auctor aliquet
-                                    Aenean.
-                                </p>
-                            </li>
-                            <li class="expertise__item">
-                                <img
-                                    src="/images/expertise/1.jpg"
-                                    width="50"
-                                    height="50"
-                                    alt=""
-                                    class="expertise__item-image"
-                                    loading="lazy"
-                                />
-                                <h4 class="expertise__item-title">
-                                    Branding identity
-                                </h4>
-                                <p class="expertise__item-description">
-                                    This is Photoshop's version of Lorem Ipsum.
-                                    Proin gravida nibh vel velit auctor aliquet
-                                    Aenean.
-                                </p>
-                            </li>
-                            <li class="expertise__item">
-                                <img
-                                    src="/images/expertise/3.jpg"
-                                    width="50"
-                                    height="50"
-                                    alt=""
-                                    class="expertise__item-image"
-                                    loading="lazy"
-                                />
-                                <h4 class="expertise__item-title">
-                                    Mobile app
-                                </h4>
-                                <p class="expertise__item-description">
-                                    This is Photoshop's version of Lorem Ipsum.
-                                    Proin gravida nibh vel velit auctor aliquet
-                                    Aenean.
-                                </p>
-                            </li>
-                            <li class="expertise__item">
-                                <img
-                                    src="/images/expertise/4.jpg"
-                                    width="50"
-                                    height="50"
-                                    alt=""
-                                    class="expertise__item-image"
-                                    loading="lazy"
-                                />
-                                <h4 class="expertise__item-title">
-                                    Search engine optimization
-                                </h4>
-                                <p class="expertise__item-description">
-                                    This is Photoshop's version of Lorem Ipsum.
-                                    Proin gravida nibh vel velit auctor aliquet
-                                    Aenean.
-                                </p>
-                            </li>
-                            <li class="expertise__item">
-                                <img
-                                    src="/images/expertise/5.jpg"
-                                    width="50"
-                                    height="50"
-                                    alt=""
-                                    class="expertise__item-image"
-                                    loading="lazy"
-                                />
-                                <h4 class="expertise__item-title">
-                                    Game development
-                                </h4>
-                                <p class="expertise__item-description">
-                                    This is Photoshop's version of Lorem Ipsum.
-                                    Proin gravida nibh vel velit auctor aliquet
-                                    Aenean.
-                                </p>
-                            </li>
-                            <li class="expertise__item">
-                                <img
-                                    src="/images/expertise/6.jpg"
-                                    width="50"
-                                    height="50"
-                                    alt=""
-                                    class="expertise__item-image"
-                                    loading="lazy"
-                                />
-                                <h4 class="expertise__item-title">
-                                    Made with love
-                                </h4>
-                                <p class="expertise__item-description">
-                                    This is Photoshop's version of Lorem Ipsum.
-                                    Proin gravida nibh vel velit auctor aliquet
-                                    Aenean.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="teams" class="team content content--light">
-                <div class="team__inner container">
-                    <div class="team__header">
-                        <h2 class="team__title">Meet our amazing team</h2>
-                        <p class="team__subtitle underline underline--white">
-                            Lorem ipsum dolor sit amet proin gravida nibh vel
-                            velit
-                        </p>
-                    </div>
-                    <div class="team__body">
-                        <h3 class="visually-hidden">Teammates</h3>
-                        <ul class="team__list">
-                            <li class="team__item">
-                                <div class="team__item-avatar">
-                                    <img
-                                        src="/images/team/1.jpg"
-                                        alt="person avatar 1"
-                                        width="220"
-                                        height="230"
-                                        class="team__item-image"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="team__item-info">
-                                    <h4 class="team__item-name">
-                                        Mickey Pearson
-                                    </h4>
-                                    <span class="team__item-position"
-                                        >CEO & Founder
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="team__item">
-                                <div class="team__item-avatar">
-                                    <img
-                                        src="/images/team/2.jpg"
-                                        alt="person avatar 2"
-                                        width="220"
-                                        height="230"
-                                        class="team__item-image"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="team__item-info">
-                                    <h4 class="team__item-name">
-                                        Raymond Smith
-                                    </h4>
-                                    <span class="team__item-position"
-                                        >Engineering
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="team__item">
-                                <div class="team__item-avatar">
-                                    <img
-                                        src="/images/team/3.jpg"
-                                        alt="person avatar 3"
-                                        width="220"
-                                        height="230"
-                                        class="team__item-image"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="team__item-info">
-                                    <h4 class="team__item-name">Coach</h4>
-                                    <span class="team__item-position"
-                                        >Designer
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="team__item">
-                                <div class="team__item-avatar">
-                                    <img
-                                        src="/images/team/4.jpg"
-                                        alt="person avatar 4"
-                                        width="220"
-                                        height="230"
-                                        class="team__item-image"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="team__item-info">
-                                    <h4 class="team__item-name">Fletcher</h4>
-                                    <span class="team__item-position"
-                                        >Marketing
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="team__footer">
-                        <p class="team__invite">
-                            Become part of our dream team, let’s join us !
-                        </p>
-                        <div class="team__link">
-                            <a href="#!" class="button">We are hiring</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="works" class="gallery content content--dark">
-                <div class="gallery__inner container">
-                    <div class="gallery__header">
-                        <h2 class="gallery__title">Our work</h2>
-                        <a class="gallery__dribble-link">
-                            See All Project in dribbble
-                            <svg
-                                width="8"
-                                height="14"
-                                viewBox="0 0 8 14"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M1 1L7 7L1 13"
-                                    stroke="#413D4B"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="gallery__body">
-                    <ul class="gallery__list">
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/1.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/2.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/3.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/4.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/5.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/6.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/7.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/8.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/9.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/10.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/11.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                        <li class="gallery__item">
-                            <img
-                                src="/images/gallery/12.jpg"
-                                alt=""
-                                width="266"
-                                height="200"
-                                class="gallery__item-image"
-                                loading="lazy"
-                            />
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="gallery__inner container">
-                    <div class="gallery__footer">
-                        <div class="gallery__link">
-                            <a href="#!" class="button">Load more </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="people-say" class="reviews" data-js-reviews>
-                <div class="reviews__inner container">
-                    <div class="reviews__header">
-                        <h2 class="visually-hidden">Reviews about us</h2>
-                        <span class="reviews__quotes">“</span>
-                    </div>
-                    <div class="reviews__body">
-                        <ul class="reviews__carousel" data-js-reviews-carousel>
-                            <li class="reviews__carousel-item">
-                                <div class="reviews__review-wrapper">
-                                    <p class="reviews__text">
-                                        Twenty years from now you will be more
-                                        disappointed by the things you didn't do
-                                        than by the ones you did. So throw off
-                                        the bowlines, sail away from the safe
-                                        harbor.
-                                    </p>
-                                </div>
-                                <div class="reviews__author">
-                                    <h4 class="reviews__author-name">
-                                        Mark Twain
-                                    </h4>
-                                    <span class="reviews__author-position"
-                                        >American writer and humorist</span
-                                    >
-                                </div>
-                            </li>
-                            <li class="reviews__carousel-item">
-                                <div class="reviews__review-wrapper">
-                                    <p class="reviews__text">
-                                        It's all about thoughts. Thought is the
-                                        beginning of everything. And thoughts
-                                        can be controlled. And therefore the
-                                        main thing for improvement is to work on
-                                        thoughts.
-                                    </p>
-                                </div>
-                                <div class="reviews__author">
-                                    <h4 class="reviews__author-name">
-                                        Lev Tolstoy
-                                    </h4>
-                                    <span class="reviews__author-position"
-                                        >Russian writer</span
-                                    >
-                                </div>
-                            </li>
-                            <li class="reviews__carousel-item">
-                                <div class="reviews__review-wrapper">
-                                    <p class="reviews__text">
-                                        This is Photoshop's version of Lorem
-                                        Ipsum. Proin gravida nibh vel velit
-                                        auctor aliquet. Aenean sollicitudin,
-                                        lorem quis bibendum auctor, nisi elit
-                                        consequat ipsum, nec sagittis sem nibh
-                                        id elit. Duis sed odio sit amet nibh
-                                        vulputate cursus a sit amet mauris.
-                                        Morbi accumsan ipsum velit. Nam nec
-                                        tellus a odio tincidunt auctor a ornare
-                                        odio. Sed non mauris vitae erat
-                                        consequat auctor eu in elit.
-                                    </p>
-                                </div>
-                                <div class="reviews__author">
-                                    <h4 class="reviews__author-name">
-                                        Jane Galadriel
-                                    </h4>
-                                    <span class="reviews__author-position"
-                                        >CEO Tengkurep</span
-                                    >
-                                </div>
-                            </li>
-                            <li class="reviews__carousel-item">
-                                <div class="reviews__review-wrapper">
-                                    <p class="reviews__text">
-                                        It is better to be sure of a good result
-                                        than to hope for an excellent one.
-                                    </p>
-                                </div>
-                                <div class="reviews__author">
-                                    <h4 class="reviews__author-name">
-                                        Warren Buffett
-                                    </h4>
-                                    <span class="reviews__author-position"
-                                        >American investor</span
-                                    >
-                                </div>
-                            </li>
-                            <li class="reviews__carousel-item">
-                                <div class="reviews__review-wrapper">
-                                    <p class="reviews__text">
-                                        When I was 5 years old, my mother always
-                                        said that the most important thing in
-                                        life is happiness. When I went to
-                                        school, when asked what I wanted to be
-                                        when I grew up, I answered “a happy
-                                        person.” They told me that I didn’t
-                                        understand the question, and I answered
-                                        that they didn’t understand life.
-                                    </p>
-                                </div>
-                                <div class="reviews__author">
-                                    <h4 class="reviews__author-name">
-                                        John Lennon
-                                    </h4>
-                                    <span class="reviews__author-position"
-                                        >British rock singer</span
-                                    >
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="reviews__controls">
-                            <ul
-                                class="reviews__controls-list"
-                                data-js-reviews-controls
-                            >
-                                <li class="reviews__controls-item">
-                                    <img
-                                        src="/images/reviews/1.jpg"
-                                        alt="person avatar 1"
-                                        width="46"
-                                        height="46"
-                                        class="reviews__controls-image"
-                                        loading="lazy"
-                                    />
-                                </li>
-                                <li class="reviews__controls-item">
-                                    <img
-                                        src="/images/reviews/2.jpg"
-                                        alt="person avatar 2"
-                                        width="46"
-                                        height="46"
-                                        class="reviews__controls-image"
-                                        loading="lazy"
-                                    />
-                                </li>
-                                <li class="reviews__controls-item">
-                                    <img
-                                        src="/images/reviews/3.jpg"
-                                        alt="person avatar 3"
-                                        width="46"
-                                        height="46"
-                                        class="reviews__controls-image"
-                                        loading="lazy"
-                                    />
-                                </li>
-                                <li class="reviews__controls-item">
-                                    <img
-                                        src="/images/reviews/4.jpg"
-                                        alt="person avatar 4"
-                                        width="46"
-                                        height="46"
-                                        class="reviews__controls-image"
-                                        loading="lazy"
-                                    />
-                                </li>
-                                <li class="reviews__controls-item">
-                                    <img
-                                        src="/images/reviews/5.jpg"
-                                        alt="person avatar 5"
-                                        width="46"
-                                        height="46"
-                                        class="reviews__controls-image"
-                                        loading="lazy"
-                                    />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="feedback content content--dark">
-                <div class="feedback__inner container">
-                    <h2 class="feedback__title">Give us a good news</h2>
-                    <form class="feedback__form" data-js-form novalidate>
-                        <div class="feedback__form-body">
-                            <p class="field">
-                                <label for="name" class="visually-hidden"
-                                    >Name</label
-                                >
-                                <input
-                                    id="name"
-                                    placeholder="Name"
-                                    type="text"
-                                    class="feedback__form-input input"
-                                    required
-                                    minlength="2"
-                                    maxlength="50"
-                                    aria-errormessage="name-errors"
-                                />
-                                <span
-                                    class="field__errors"
-                                    id="name-errors"
-                                    data-js-form-field-errors
-                                ></span>
-                            </p>
-                            <p class="field">
-                                <label for="email" class="visually-hidden"
-                                    >Email</label
-                                >
-                                <input
-                                    id="email"
-                                    placeholder="Email"
-                                    type="email"
-                                    class="feedback__form-input input"
-                                    pattern="^\S+@\S+\.\S+$"
-                                    title="Не соответствует формату: example@gmail.com"
-                                    required
-                                    minlength="5"
-                                    maxlength="64"
-                                    aria-errormessage="email-errors"
-                                />
-                                <span
-                                    class="field__errors"
-                                    id="email-errors"
-                                    data-js-form-field-errors
-                                ></span>
-                            </p>
-                            <p class="field">
-                                <label for="number" class="visually-hidden"
-                                    >Phone number</label
-                                >
-                                <input
-                                    id="number"
-                                    placeholder="+1 (999) 999-99-99"
-                                    type="tel"
-                                    class="feedback__form-input input"
-                                    required
-                                    pattern="[+]?[0-9]{1,4}[0-9]{6,8}"
-                                    minlength="11"
-                                    maxlength="12"
-                                    title="Не соответствует формату: +79120123456"
-                                    aria-errormessage="number-errors"
-                                />
-                                <span
-                                    class="field__errors"
-                                    id="number-errors"
-                                    data-js-form-field-errors
-                                ></span>
-                            </p>
-                            <p class="field">
-                                <label for="subject" class="visually-hidden"
-                                    >Subject</label
-                                >
-                                <input
-                                    id="subject"
-                                    placeholder="Subject"
-                                    type="text"
-                                    class="feedback__form-input input"
-                                    required
-                                    minlength="3"
-                                    maxlength="50"
-                                    aria-errormessage="subject-errors"
-                                />
-                                <span
-                                    class="field__errors"
-                                    id="subject-errors"
-                                    data-js-form-field-errors
-                                ></span>
-                            </p>
-                            <p class="field">
-                                <label for="message" class="visually-hidden"
-                                    >Select an activity factor:</label
-                                >
-                                <textarea
-                                    class="feedback__form feedback__form-textarea"
-                                    id="message"
-                                    name="message"
-                                    placeholder="Your Massage"
-                                    required
-                                    minlength="3"
-                                    maxlength="800"
-                                    aria-errormessage="message-errors"
-                                ></textarea>
-
-                                <span
-                                    class="field__errors"
-                                    id="message-errors"
-                                    data-js-form-field-errors
-                                ></span>
-                            </p>
-                        </div>
-
-                        <div class="feedback__form-button">
-                            <button class="button" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-        </main>
-        <footer class="footer content content--light">
-            <div class="footer__inner container">
-                <h2 class="visually-hidden">Contacts and socials</h2>
-                <div class="footer__body">
-                    <div class="footer__description">
-                        <a
-                            href="/"
-                            class="footer__logo logo"
-                            aria-label="Home"
-                            title="Home"
-                        >
-                            <img
-                                src="/icons/logo.svg"
-                                alt=""
-                                width="44"
-                                height="47.5"
-                                class="logo__image"
-                                loading="lazy"
-                            />
-                            <span class="logo__title">tajam</span>
-                        </a>
-                        <p class="footer__description-text">
-                            lorem quis bibendum auctor, nisi elit consequat
-                            ipsum, nec sagittis sem nibh elit. Duis sed odio sit
-                            amet auctror a ornare odio non mauris vitae erat in
-                            elit
-                        </p>
-                    </div>
-                    <div class="footer__contacts">
-                        <h3 class="footer__title">Our studio</h3>
-                        <ul class="footer__contacts-list">
-                            <li class="footer__contacts-item">
-                                <img
-                                    src="/icons/map-mark.svg"
-                                    width="14"
-                                    height="19"
-                                    alt=""
-                                    loading="lazy"
-                                />
-                                <p class="footer__contacts-address">
-                                    Ruko cucruk, Jl. Radio luar dalem jos No.12
-                                    - 13, Kalideres - Jakarta Barat 11480 -
-                                    Indonesia
-                                </p>
-                            </li>
-                            <li class="footer__contacts-item">
-                                <img
-                                    src="/icons/phone.svg"
-                                    width="16"
-                                    height="16"
-                                    alt=""
-                                    loading="lazy"
-                                />
-                                <a
-                                    href="tel:+622122243333"
-                                    class="footer__contacts-number"
-                                    >(+62) 21-2224 3333</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__soc1als">
-                        <h3 class="footer__title">Stay in touch</h3>
-                        <form class="footer__subscribe">
-                            <label class="visually-hidden" for="subscribe-email"
-                                >Email</label
-                            >
-                            <input
-                                id="subscribe-email"
-                                placeholder="Subscribe our newsletter"
-                                type="email"
-                                class="footer__subscribe-input input"
-                            />
-                            <button
-                                class="footer__subscribe-button"
-                                title="Subscribe"
-                                type="submit"
-                            >
-                                <svg
-                                    width="26"
-                                    height="26"
-                                    viewBox="0 0 26 26"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M25 1L8.65957 17M25 1L12.7447 25L8.65957 17M25 1L1 12.5L8.65957 17"
-                                        stroke="black"
-                                        stroke-width="2"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </button>
-                            <span class="visually-hidden">Subscribe</span>
-                        </form>
-                        <ul class="footer__soc1als-list">
-                            <li class="footer__soc1als-item">
-                                <a
-                                    href="/"
-                                    target="_blank"
-                                    class="footer__soc1als-link"
-                                >
-                                    <svg
-                                        width="9"
-                                        height="16"
-                                        viewBox="0 0 9 16"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M5.65094 15.9304V9.40304L8.22087 9.40304L8.75398 6.5H5.65094V5.47327C5.65094 4.70622 5.80139 4.17518 6.14656 3.83591C6.49174 3.49663 7.03165 3.34911 7.81051 3.34911C8.00764 3.34911 8.18909 3.35107 8.35009 3.35499C8.58426 3.3607 8.77515 3.37054 8.90803 3.38453V0.752878C8.85493 0.738124 8.79223 0.723372 8.722 0.70885C8.56289 0.675949 8.36508 0.644233 8.15245 0.616382C7.70811 0.558172 7.19901 0.516823 6.84284 0.516823C5.4044 0.516823 4.31729 0.824561 3.55847 1.46198C2.64266 2.23126 2.20502 3.48075 2.20502 5.24907V6.49999H0.246048V9.40304H2.20502V15.7202C2.55668 15.9304 4.89583 16 5.65094 15.9304Z"
-                                            fill="white"
-                                        />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footer__soc1als-item">
-                                <a
-                                    href="/"
-                                    target="_blank"
-                                    class="footer__soc1als-link"
-                                >
-                                    <svg
-                                        width="12"
-                                        height="11"
-                                        viewBox="0 0 12 11"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M10.7715 2.73842C10.7788 2.85776 10.7788 2.97711 10.7788 3.09755C10.7788 6.76747 8.30225 11 3.7738 11V10.9978C2.43608 11 1.12614 10.5677 0 9.75268C0.194516 9.77908 0.390006 9.79228 0.585984 9.79283C1.69458 9.79393 2.77148 9.3743 3.64363 8.6016C2.59013 8.57905 1.6663 7.80415 1.34357 6.67287C1.71261 6.75317 2.09287 6.73667 2.45509 6.62503C1.30652 6.36324 0.480195 5.22481 0.480195 3.9027V3.8675C0.822425 4.08254 1.20561 4.20188 1.59756 4.21508C0.515783 3.39948 0.182328 1.77598 0.835588 0.506662C2.08556 2.2418 3.9298 3.29664 5.90957 3.40828C5.71115 2.44364 5.98221 1.4328 6.62182 0.754697C7.61341 -0.296837 9.17294 -0.24294 10.1051 0.875139C10.6564 0.752497 11.1849 0.524261 11.6685 0.200882C11.4847 0.843791 11.1001 1.38991 10.5862 1.73693C11.0742 1.67204 11.551 1.52465 12 1.29971C11.6695 1.85848 11.2531 2.3452 10.7715 2.73842Z"
-                                            fill="white"
-                                        />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footer__soc1als-item">
-                                <a
-                                    href="/"
-                                    target="_blank"
-                                    class="footer__soc1als-link"
-                                >
-                                    <svg
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fill-rule="evenodd"
-                                            clip-rule="evenodd"
-                                            d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM9.73509 14.5249C9.18144 14.6718 8.59986 14.75 8 14.75C7.09221 14.75 6.22627 14.5708 5.43563 14.2458C6.18589 11.4765 8.26057 9.49309 10.6373 8.60974C11.0495 10.6074 10.7424 12.7498 9.73509 14.5249ZM11.5117 13.7657C12.1563 12.01 12.2833 10.0761 11.8882 8.25257C12.842 8.06002 13.8149 8.04234 14.7465 8.21807C14.6719 10.5686 13.3956 12.6159 11.5117 13.7657ZM14.6588 6.88796C13.6274 6.73665 12.5654 6.78091 11.5283 7.00243C11.3274 6.43869 11.0737 5.89561 10.7716 5.37994C11.624 4.88763 12.4012 4.26584 13.0666 3.53986C13.8823 4.46569 14.4481 5.61685 14.6588 6.88796ZM12.1196 2.65248C11.5194 3.3096 10.8133 3.86842 10.0388 4.30398C9.516 3.63952 8.91119 3.04129 8.23688 2.52763L8.22058 2.51523L8.20368 2.50395C8.2036 2.5039 8.20215 2.50293 8.19908 2.50075C8.19548 2.49821 8.19068 2.49478 8.18453 2.49031C8.17208 2.48126 8.15665 2.46984 8.13815 2.45599C8.11715 2.44027 8.09607 2.42437 8.07343 2.40729L8.06883 2.40381C8.0505 2.38997 8.0311 2.37533 8.00985 2.35936C7.9639 2.32481 7.9135 2.28723 7.8672 2.25405C7.83485 2.23087 7.78835 2.19807 7.74085 2.16915L7.71073 2.14831C7.64895 2.10552 7.55609 2.0412 7.47178 1.98943C7.393 1.93421 7.28655 1.8713 7.2168 1.83046C7.14933 1.79094 7.07666 1.74947 7.03151 1.7237L6.99685 1.70389C6.98855 1.69904 6.98133 1.69502 6.97834 1.69335L6.97775 1.69302C6.97249 1.69008 6.96665 1.68686 6.96139 1.68397L6.9543 1.68006C6.94423 1.67452 6.93415 1.66897 6.92368 1.66314C6.91168 1.65646 6.90198 1.65096 6.8949 1.64684L6.89003 1.64343L6.8728 1.6329C6.81047 1.59482 6.74552 1.56003 6.71027 1.54115L6.69725 1.53418L6.68218 1.52606L6.6667 1.51875C6.63325 1.50296 6.58253 1.47879 6.52538 1.45154L6.52403 1.4509C6.50609 1.44235 6.48742 1.43345 6.46857 1.42447C6.9606 1.31034 7.47325 1.25 8 1.25C9.55097 1.25 10.9798 1.77309 12.1196 2.65248ZM4.69083 2.11544C3.68965 2.67967 2.84692 3.492 2.24608 4.46903C2.96081 4.83152 3.72849 5.08763 4.51933 5.22843L4.52103 5.22872L4.52273 5.22905C5.5 5.4084 6.50748 5.4036 7.49383 5.22577C7.9463 5.14408 8.3907 5.02262 8.82186 4.86486C8.41661 4.38552 7.96141 3.95064 7.46343 3.56978C7.4293 3.54613 7.3915 3.51805 7.3606 3.49493C7.3372 3.47743 7.3097 3.45668 7.28258 3.4362L7.28186 3.43566C7.26388 3.42209 7.24611 3.40869 7.22983 3.39645C7.18528 3.36295 7.1448 3.33283 7.11128 3.30883C7.0895 3.29322 7.07699 3.2848 7.07184 3.28133C7.06993 3.28004 7.06903 3.27943 7.06905 3.2794L7.0499 3.2686L7.02738 3.25333C6.99423 3.23083 6.9647 3.2104 6.93765 3.19168L6.9374 3.1915C6.87812 3.15048 6.83061 3.11761 6.7824 3.089L6.7508 3.07023L6.72235 3.04867C6.72318 3.04931 6.7227 3.04899 6.72063 3.0476L6.72035 3.04742C6.7153 3.04407 6.70199 3.03524 6.67745 3.02C6.6445 2.99958 6.6041 2.97545 6.56093 2.95015C6.49968 2.9143 6.4439 2.88248 6.39978 2.8573L6.39455 2.85432C6.37614 2.8438 6.35988 2.83452 6.34628 2.82668L6.34493 2.8259L6.33425 2.82L6.3292 2.81723C6.31918 2.81173 6.3058 2.80435 6.29218 2.79678C6.27623 2.7879 6.25688 2.777 6.23805 2.76598C6.22775 2.75995 6.20855 2.74865 6.18705 2.7347C6.16063 2.71895 6.13228 2.70373 6.09853 2.6856L6.09703 2.68478C6.05665 2.66568 6.0064 2.64173 5.95308 2.61628C5.85273 2.56843 5.74138 2.51535 5.6641 2.47941L5.65578 2.47554L5.62085 2.45808C5.49847 2.40134 5.35196 2.3458 5.18789 2.28359L5.18733 2.28337C5.1516 2.26983 5.11505 2.25597 5.07773 2.24172C4.97653 2.2054 4.87144 2.17233 4.76136 2.13768L4.7611 2.1376C4.7379 2.1303 4.71448 2.12293 4.69083 2.11544ZM1.67597 5.63485C2.49963 6.0505 3.38208 6.34379 4.29003 6.50562C5.42658 6.714 6.59105 6.70708 7.7243 6.50275C8.36935 6.38629 8.99909 6.2008 9.60291 5.95363C9.87168 6.40042 10.0977 6.87123 10.2776 7.36002C7.56617 8.3366 5.20007 10.5431 4.26428 13.6229C2.44729 12.4133 1.25 10.3465 1.25 8C1.25 7.16786 1.40058 6.37089 1.67597 5.63485Z"
-                                            fill="white"
-                                        />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footer__soc1als-item">
-                                <a
-                                    href="/"
-                                    target="_blank"
-                                    class="footer__soc1als-link"
-                                >
-                                    <svg
-                                        width="15"
-                                        height="15"
-                                        viewBox="0 0 15 15"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M11.497 4.38883C11.0003 4.3898 10.5964 3.98763 10.5955 3.49093C10.5945 2.99423 10.9967 2.59036 11.4936 2.58939C11.9905 2.58841 12.3944 2.99082 12.3954 3.48752C12.3961 3.98422 11.9939 4.38785 11.497 4.38883Z"
-                                            fill="white"
-                                        />
-                                        <path
-                                            fill-rule="evenodd"
-                                            clip-rule="evenodd"
-                                            d="M7.50717 11.3506C5.38068 11.3548 3.65319 9.6343 3.64906 7.50729C3.64493 5.38077 5.36585 3.65301 7.49235 3.64888C9.61933 3.64475 11.3471 5.36619 11.3512 7.49247C11.3553 9.61948 9.63391 11.3465 7.50717 11.3506ZM7.49502 5.00022C6.11478 5.00265 4.99746 6.12411 4.99989 7.50462C5.00256 8.88536 6.12426 10.0024 7.5045 9.99978C8.88523 9.9971 10.0026 8.87589 9.99987 7.49514C9.9972 6.11439 8.87552 4.99755 7.49502 5.00022Z"
-                                            fill="white"
-                                        />
-                                        <path
-                                            fill-rule="evenodd"
-                                            clip-rule="evenodd"
-                                            d="M2.5745 0.404049C3.05079 0.217422 3.59583 0.0896014 4.39385 0.0519364C5.19382 0.0135454 5.4492 0.00479439 7.48555 0.000907888C9.52238 -0.00297861 9.77777 0.00479289 10.5777 0.0402709C11.376 0.0747769 11.9213 0.200655 12.3985 0.38534C12.8923 0.575609 13.3112 0.831738 13.7287 1.24752C14.1462 1.66378 14.4033 2.08126 14.596 2.57432C14.7824 3.05109 14.9102 3.59566 14.9481 4.39417C14.986 5.19389 14.9952 5.44904 14.9991 7.48566C15.003 9.52203 14.9947 9.77767 14.9598 10.5781C14.925 11.3759 14.7994 11.9214 14.6147 12.3985C14.4239 12.8922 14.1683 13.3112 13.7525 13.7287C13.3367 14.1464 12.9188 14.4032 12.4257 14.5962C11.949 14.7823 11.4044 14.9102 10.6064 14.9483C9.80645 14.9862 9.55105 14.9952 7.51398 14.9991C5.47787 15.003 5.22249 14.9952 4.42253 14.96C3.62426 14.925 3.07873 14.7993 2.60172 14.6149C2.10795 14.4239 1.68901 14.1685 1.27153 13.7525C0.853819 13.3365 0.596491 12.9187 0.404036 12.4257C0.217411 11.9492 0.0900669 11.4043 0.0519204 10.6066C0.0137724 9.80634 0.00478442 9.55071 0.000899415 7.51434C-0.00300059 5.47772 0.00502292 5.22257 0.0400104 4.4226C0.0752499 3.62409 0.200398 3.07879 0.385081 2.60129C0.57583 2.10774 0.831466 1.68905 1.24773 1.27133C1.6635 0.853853 2.08146 0.596261 2.5745 0.404049ZM3.08846 13.3549C3.35309 13.4567 3.75014 13.5782 4.48134 13.6101C5.27254 13.6443 5.50946 13.6519 7.51155 13.648C9.51436 13.6443 9.75129 13.6358 10.5422 13.5987C11.2727 13.5639 11.6698 13.4409 11.9337 13.3379C12.2838 13.2011 12.5332 13.0376 12.7951 12.7754C13.0571 12.5122 13.2191 12.2621 13.3547 11.912C13.4568 11.6471 13.5781 11.2498 13.6099 10.5186C13.6446 9.72785 13.6519 9.49068 13.648 7.48809C13.6444 5.48598 13.6359 5.24881 13.5982 4.45784C13.5637 3.72712 13.441 3.33005 13.3377 3.06639C13.2009 2.71574 13.0379 2.46691 12.7749 2.20471C12.512 1.9425 12.262 1.7809 11.9113 1.64531C11.6472 1.54301 11.2496 1.42199 10.5189 1.39016C9.72771 1.35541 9.49053 1.34836 7.48798 1.35225C5.48589 1.35614 5.24897 1.36415 4.45801 1.40158C3.72706 1.43632 3.33048 1.55904 3.06609 1.66232C2.71617 1.79913 2.46685 1.9617 2.20466 2.22488C1.94294 2.48804 1.78086 2.73761 1.64527 3.08851C1.54371 3.3529 1.42147 3.75045 1.39013 4.48117C1.35561 5.27238 1.34833 5.50956 1.35222 7.51166C1.35587 9.51425 1.36436 9.75143 1.40155 10.5419C1.43581 11.2731 1.55949 11.6697 1.66229 11.9343C1.79909 12.284 1.96215 12.5333 2.22483 12.7955C2.488 13.0568 2.73805 13.2193 3.08846 13.3549Z"
-                                            fill="white"
-                                        />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footer__soc1als-item">
-                                <a
-                                    href="/"
-                                    target="_blank"
-                                    class="footer__soc1als-link"
-                                >
-                                    <svg
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M0.430577 11.545C1.78804 9.55873 4.40933 9.39324 5.70044 9.5727C5.34137 9.17258 4.43628 8.42787 5.07493 7.2003C2.16059 7.57248 1.22922 5.71052 1.09617 4.24833C0.830069 1.79318 2.90568 0.0279311 5.03484 0H9.74555C9.58589 0.151876 8.80072 0.689899 8.61444 0.689899L7.37689 0.703515C10.5307 3.77943 7.46986 6.35887 6.84435 6.89655C5.58019 8.48269 9.54581 9.26895 9.33292 11.9587C9.33292 14.3999 7.35028 16 4.24967 16C0.803122 15.9864 -0.846721 13.7659 0.430577 11.545ZM7.33715 14.5106C8.5747 13.5312 8.28198 12.083 7.32367 11.1173C6.75138 10.5381 6.05951 9.98643 4.5956 10.1655C2.87873 10.3726 1.62804 11.2276 1.69474 12.5655C2.05381 15.4072 6.00629 15.4759 7.33681 14.4966L7.33715 14.5106ZM6.49875 6.1658C7.92257 4.95184 6.60519 0.71783 4.6623 0.71783C3.42475 0.71783 2.7861 1.64165 2.73254 2.95232C2.63957 5.37954 4.78221 7.62799 6.49875 6.1658ZM12.7929 7.71039L10.6506 7.72435V6.60711H12.7667V4.41417H13.8446V6.60746L15.9869 6.62108L16 7.7247H13.8446V9.93161L12.7798 9.94558L12.7929 7.71039Z"
-                                            fill="white"
-                                        />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footer__soc1als-item">
-                                <a
-                                    href="/"
-                                    target="_blank"
-                                    class="footer__soc1als-link"
-                                >
-                                    <svg
-                                        width="16"
-                                        height="11"
-                                        viewBox="0 0 16 11"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fill-rule="evenodd"
-                                            clip-rule="evenodd"
-                                            d="M15.1485 0.838319C15.3967 1.08212 15.575 1.38526 15.6655 1.71742C16 2.94339 16 5.5 16 5.5C16 5.5 16 8.05661 15.6655 9.28258C15.575 9.61474 15.3967 9.91788 15.1485 10.1617C14.9002 10.4055 14.5907 10.5814 14.2509 10.6718C13 11 8 11 8 11C8 11 3 11 1.74909 10.6718C1.40929 10.5814 1.09977 10.4055 0.851525 10.1617C0.603277 9.91788 0.425004 9.61474 0.334545 9.28258C3.97364e-08 8.05661 0 5.5 0 5.5C0 5.5 3.97364e-08 2.94339 0.334545 1.71742C0.425004 1.38526 0.603277 1.08212 0.851525 0.838319C1.09977 0.59452 1.40929 0.418622 1.74909 0.328226C3 0 8 0 8 0C8 0 13 0 14.2509 0.328226C14.5907 0.418622 14.9002 0.59452 15.1485 0.838319ZM10.5455 5.50002L6.36365 3.17849V7.82155L10.5455 5.50002Z"
-                                            fill="white"
-                                        />
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer__extra">
-                    <div class="footer__extra-menu">
-                        <ul class="footer__extra-menu-list">
-                            <li class="footer__extra-menu-item">
-                                <a href="/" class="footer__extra-menu-link"
-                                    >Help</a
-                                >
-                            </li>
-                            <li class="footer__extra-menu-item">
-                                <a href="/" class="footer__extra-menu-link"
-                                    >Terms & condition</a
-                                >
-                            </li>
-                            <li class="footer__extra-menu-item">
-                                <a href="/" class="footer__extra-menu-link"
-                                    >Privacy</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="footer__extra-copyright">
-                        Copyright © <time datetime="2015">2015</time> - Tajem
-                        Creative
-                    </p>
-                </div>
+            <div class="story__link">
+              <a href="#!" class="button">Learn more</a>
             </div>
-        </footer>
-    </body>
+          </div>
+        </div>
+      </section>
+
+      <section class="story__watch" data-js-story>
+        <div class="container content content--light">
+          <a href="javascript:;" class="story__play" data-js-story-play-button>
+            <svg
+              width="100"
+              height="101"
+              viewBox="0 0 100 101"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M38 29.5L38.7829 28.2205C38.32 27.9373 37.7401 27.9261 37.2667 28.1915C36.7932 28.4568 36.5 28.9572 36.5 29.5H38ZM38 71H36.5C36.5 71.5456 36.7963 72.0483 37.2737 72.3125C37.7512 72.5766 38.3344 72.5607 38.7967 72.2709L38 71ZM71.5 50L72.2967 51.2709C72.7367 50.9951 73.0028 50.5112 73 49.9919C72.9972 49.4726 72.7259 48.9916 72.2829 48.7206L71.5 50ZM97 50.5C97 76.4574 75.9574 97.5 50 97.5V100.5C77.6142 100.5 100 78.1142 100 50.5H97ZM50 97.5C24.0426 97.5 3 76.4574 3 50.5H0C0 78.1142 22.3858 100.5 50 100.5V97.5ZM3 50.5C3 24.5426 24.0426 3.5 50 3.5V0.5C22.3858 0.5 0 22.8858 0 50.5H3ZM50 3.5C75.9574 3.5 97 24.5426 97 50.5H100C100 22.8858 77.6142 0.5 50 0.5V3.5ZM36.5 29.5V71H39.5V29.5H36.5ZM38.7967 72.2709L72.2967 51.2709L70.7033 48.7291L37.2033 69.7291L38.7967 72.2709ZM72.2829 48.7206L38.7829 28.2205L37.2171 30.7795L70.7171 51.2794L72.2829 48.7206Z"
+                fill="white"
+              />
+            </svg>
+
+            <h3 class="story__play-link">Watch our story</h3>
+          </a>
+        </div>
+        <div class="story__overlay" data-js-story-overlay>
+          <div class="story__modal">
+            <button
+              class="story__exit-button exit-button"
+              aria-label="Open videoplayer"
+              title="Open videoplayer"
+              data-js-story-exit-button
+            >
+              <span class="exit-button__line"></span>
+              <span class="exit-button__line"></span>
+            </button>
+
+            <div class="story__player">
+              <!-- <iframe
+                id="rutube-iframe"
+                width="100%"
+                height="100%"
+                src="https://rutube.ru/play/embed/f884aa6ed5f94120b7304506042fe5bb/"
+                frameborder="0"
+                allow="clipboard-write; autoplay"
+                webkitAllowFullScreen
+                mozallowfullscreen
+                allowfullscreen
+              ></iframe> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="expertise" class="expertise content content--dark">
+        <div class="expertise__inner container">
+          <div class="expertise__header">
+            <h2 class="expertise__title">Expertise</h2>
+            <p class="expertise__subtitle underline underline--gray">
+              Lorem ipsum dolor sit amet proin gravida nibh vel velit
+            </p>
+          </div>
+          <div class="expertise__body">
+            <h3 class="visually-hidden">Expertise features</h3>
+            <ul class="expertise__list">
+              <li class="expertise__item">
+                <img
+                  src="/images/expertise/1.jpg"
+                  width="50"
+                  height="50"
+                  alt=""
+                  class="expertise__item-image"
+                  loading="lazy"
+                />
+                <h4 class="expertise__item-title">Web design & development</h4>
+                <p class="expertise__item-description">
+                  This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
+                  vel velit auctor aliquet Aenean.
+                </p>
+              </li>
+              <li class="expertise__item">
+                <img
+                  src="/images/expertise/1.jpg"
+                  width="50"
+                  height="50"
+                  alt=""
+                  class="expertise__item-image"
+                  loading="lazy"
+                />
+                <h4 class="expertise__item-title">Branding identity</h4>
+                <p class="expertise__item-description">
+                  This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
+                  vel velit auctor aliquet Aenean.
+                </p>
+              </li>
+              <li class="expertise__item">
+                <img
+                  src="/images/expertise/3.jpg"
+                  width="50"
+                  height="50"
+                  alt=""
+                  class="expertise__item-image"
+                  loading="lazy"
+                />
+                <h4 class="expertise__item-title">Mobile app</h4>
+                <p class="expertise__item-description">
+                  This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
+                  vel velit auctor aliquet Aenean.
+                </p>
+              </li>
+              <li class="expertise__item">
+                <img
+                  src="/images/expertise/4.jpg"
+                  width="50"
+                  height="50"
+                  alt=""
+                  class="expertise__item-image"
+                  loading="lazy"
+                />
+                <h4 class="expertise__item-title">
+                  Search engine optimization
+                </h4>
+                <p class="expertise__item-description">
+                  This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
+                  vel velit auctor aliquet Aenean.
+                </p>
+              </li>
+              <li class="expertise__item">
+                <img
+                  src="/images/expertise/5.jpg"
+                  width="50"
+                  height="50"
+                  alt=""
+                  class="expertise__item-image"
+                  loading="lazy"
+                />
+                <h4 class="expertise__item-title">Game development</h4>
+                <p class="expertise__item-description">
+                  This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
+                  vel velit auctor aliquet Aenean.
+                </p>
+              </li>
+              <li class="expertise__item">
+                <img
+                  src="/images/expertise/6.jpg"
+                  width="50"
+                  height="50"
+                  alt=""
+                  class="expertise__item-image"
+                  loading="lazy"
+                />
+                <h4 class="expertise__item-title">Made with love</h4>
+                <p class="expertise__item-description">
+                  This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
+                  vel velit auctor aliquet Aenean.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="teams" class="team content content--light">
+        <div class="team__inner container">
+          <div class="team__header">
+            <h2 class="team__title">Meet our amazing team</h2>
+            <p class="team__subtitle underline underline--white">
+              Lorem ipsum dolor sit amet proin gravida nibh vel velit
+            </p>
+          </div>
+          <div class="team__body">
+            <h3 class="visually-hidden">Teammates</h3>
+            <script type="text/x-handlebars-template" id="template">
+              {{#each team_card_list}}
+                <li class="team__item">
+                  <div class="team__item-avatar">
+                    <img
+                      src="/images/team/{{this.number}}.jpg"
+                      alt="person avatar {{this.number}}"
+                      width="220"
+                      height="230"
+                      class="team__item-image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="team__item-info">
+                    <h4 class="team__item-name">{{this.name}}</h4>
+                    <span class="team__item-position">{{this.name}}</span>
+                  </div>
+                </li>
+              {{/each}}
+            </script>
+            <ul class="team__list" id="team__list">
+              <!-- <li class="team__item">
+                <div class="team__item-avatar">
+                  <img
+                    src="/images/team/1.jpg"
+                    alt="person avatar 1"
+                    width="220"
+                    height="230"
+                    class="team__item-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="team__item-info">
+                  <h4 class="team__item-name">Mickey Pearson</h4>
+                  <span class="team__item-position">CEO & Founder </span>
+                </div>
+              </li> -->
+              <!-- 
+              <li class="team__item">
+                <div class="team__item-avatar">
+                  <img
+                    src="/images/team/2.jpg"
+                    alt="person avatar 2"
+                    width="220"
+                    height="230"
+                    class="team__item-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="team__item-info">
+                  <h4 class="team__item-name">Raymond Smith</h4>
+                  <span class="team__item-position">Engineering </span>
+                </div>
+              </li>
+              <li class="team__item">
+                <div class="team__item-avatar">
+                  <img
+                    src="/images/team/3.jpg"
+                    alt="person avatar 3"
+                    width="220"
+                    height="230"
+                    class="team__item-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="team__item-info">
+                  <h4 class="team__item-name">Coach</h4>
+                  <span class="team__item-position">Designer</span>
+                </div>
+              </li>
+              <li class="team__item">
+                <div class="team__item-avatar">
+                  <img
+                    src="/images/team/4.jpg"
+                    alt="person avatar 4"
+                    width="220"
+                    height="230"
+                    class="team__item-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="team__item-info">
+                  <h4 class="team__item-name">Fletcher</h4>
+                  <span class="team__item-position">Marketing</span>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+          <div class="team__footer">
+            <p class="team__invite">
+              Become part of our dream team, let’s join us !
+            </p>
+            <div class="team__link">
+              <a href="#!" class="button">We are hiring</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="works" class="gallery content content--dark">
+        <div class="gallery__inner container">
+          <div class="gallery__header">
+            <h2 class="gallery__title">Our work</h2>
+            <a class="gallery__dribble-link">
+              See All Project in dribbble
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L7 7L1 13"
+                  stroke="#413D4B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery__body">
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/1.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/2.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/3.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/4.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/5.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/6.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/7.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/8.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/9.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/10.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/11.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                src="/images/gallery/12.jpg"
+                alt=""
+                width="266"
+                height="200"
+                class="gallery__item-image"
+                loading="lazy"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="gallery__inner container">
+          <div class="gallery__footer">
+            <div class="gallery__link">
+              <a href="#!" class="button">Load more </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="people-say" class="reviews" data-js-reviews>
+        <div class="reviews__inner container">
+          <div class="reviews__header">
+            <h2 class="visually-hidden">Reviews about us</h2>
+            <span class="reviews__quotes">“</span>
+          </div>
+          <div class="reviews__body">
+            <ul class="reviews__carousel" data-js-reviews-carousel>
+              <li class="reviews__carousel-item">
+                <div class="reviews__review-wrapper">
+                  <p class="reviews__text">
+                    Twenty years from now you will be more disappointed by the
+                    things you didn't do than by the ones you did. So throw off
+                    the bowlines, sail away from the safe harbor.
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <h4 class="reviews__author-name">Mark Twain</h4>
+                  <span class="reviews__author-position"
+                    >American writer and humorist</span
+                  >
+                </div>
+              </li>
+              <li class="reviews__carousel-item">
+                <div class="reviews__review-wrapper">
+                  <p class="reviews__text">
+                    It's all about thoughts. Thought is the beginning of
+                    everything. And thoughts can be controlled. And therefore
+                    the main thing for improvement is to work on thoughts.
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <h4 class="reviews__author-name">Lev Tolstoy</h4>
+                  <span class="reviews__author-position">Russian writer</span>
+                </div>
+              </li>
+              <li class="reviews__carousel-item">
+                <div class="reviews__review-wrapper">
+                  <p class="reviews__text">
+                    This is Photoshop's version of Lorem Ipsum. Proin gravida
+                    nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                    quis bibendum auctor, nisi elit consequat ipsum, nec
+                    sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                    vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                    velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                    Sed non mauris vitae erat consequat auctor eu in elit.
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <h4 class="reviews__author-name">Jane Galadriel</h4>
+                  <span class="reviews__author-position">CEO Tengkurep</span>
+                </div>
+              </li>
+              <li class="reviews__carousel-item">
+                <div class="reviews__review-wrapper">
+                  <p class="reviews__text">
+                    It is better to be sure of a good result than to hope for an
+                    excellent one.
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <h4 class="reviews__author-name">Warren Buffett</h4>
+                  <span class="reviews__author-position"
+                    >American investor</span
+                  >
+                </div>
+              </li>
+              <li class="reviews__carousel-item">
+                <div class="reviews__review-wrapper">
+                  <p class="reviews__text">
+                    When I was 5 years old, my mother always said that the most
+                    important thing in life is happiness. When I went to school,
+                    when asked what I wanted to be when I grew up, I answered “a
+                    happy person.” They told me that I didn’t understand the
+                    question, and I answered that they didn’t understand life.
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <h4 class="reviews__author-name">John Lennon</h4>
+                  <span class="reviews__author-position"
+                    >British rock singer</span
+                  >
+                </div>
+              </li>
+            </ul>
+            <div class="reviews__controls">
+              <ul class="reviews__controls-list" data-js-reviews-controls>
+                <li class="reviews__controls-item">
+                  <img
+                    src="/images/reviews/1.jpg"
+                    alt="person avatar 1"
+                    width="46"
+                    height="46"
+                    class="reviews__controls-image"
+                    loading="lazy"
+                  />
+                </li>
+                <li class="reviews__controls-item">
+                  <img
+                    src="/images/reviews/2.jpg"
+                    alt="person avatar 2"
+                    width="46"
+                    height="46"
+                    class="reviews__controls-image"
+                    loading="lazy"
+                  />
+                </li>
+                <li class="reviews__controls-item">
+                  <img
+                    src="/images/reviews/3.jpg"
+                    alt="person avatar 3"
+                    width="46"
+                    height="46"
+                    class="reviews__controls-image"
+                    loading="lazy"
+                  />
+                </li>
+                <li class="reviews__controls-item">
+                  <img
+                    src="/images/reviews/4.jpg"
+                    alt="person avatar 4"
+                    width="46"
+                    height="46"
+                    class="reviews__controls-image"
+                    loading="lazy"
+                  />
+                </li>
+                <li class="reviews__controls-item">
+                  <img
+                    src="/images/reviews/5.jpg"
+                    alt="person avatar 5"
+                    width="46"
+                    height="46"
+                    class="reviews__controls-image"
+                    loading="lazy"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="feedback content content--dark">
+        <div class="feedback__inner container">
+          <h2 class="feedback__title">Give us a good news</h2>
+          <form class="feedback__form" data-js-form novalidate>
+            <div class="feedback__form-body">
+              <p class="field">
+                <label for="name" class="visually-hidden">Name</label>
+                <input
+                  id="name"
+                  placeholder="Name"
+                  type="text"
+                  class="feedback__form-input input"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  aria-errormessage="name-errors"
+                />
+                <span
+                  class="field__errors"
+                  id="name-errors"
+                  data-js-form-field-errors
+                ></span>
+              </p>
+              <p class="field">
+                <label for="email" class="visually-hidden">Email</label>
+                <input
+                  id="email"
+                  placeholder="Email"
+                  type="email"
+                  class="feedback__form-input input"
+                  pattern="^\S+@\S+\.\S+$"
+                  title="Не соответствует формату: example@gmail.com"
+                  required
+                  minlength="5"
+                  maxlength="64"
+                  aria-errormessage="email-errors"
+                />
+                <span
+                  class="field__errors"
+                  id="email-errors"
+                  data-js-form-field-errors
+                ></span>
+              </p>
+              <p class="field">
+                <label for="number" class="visually-hidden">Phone number</label>
+                <input
+                  id="number"
+                  placeholder="+1 (999) 999-99-99"
+                  type="tel"
+                  class="feedback__form-input input"
+                  required
+                  pattern="[+]?[0-9]{1,4}[0-9]{6,8}"
+                  minlength="11"
+                  maxlength="12"
+                  title="Не соответствует формату: +79120123456"
+                  aria-errormessage="number-errors"
+                />
+                <span
+                  class="field__errors"
+                  id="number-errors"
+                  data-js-form-field-errors
+                ></span>
+              </p>
+              <p class="field">
+                <label for="subject" class="visually-hidden">Subject</label>
+                <input
+                  id="subject"
+                  placeholder="Subject"
+                  type="text"
+                  class="feedback__form-input input"
+                  required
+                  minlength="3"
+                  maxlength="50"
+                  aria-errormessage="subject-errors"
+                />
+                <span
+                  class="field__errors"
+                  id="subject-errors"
+                  data-js-form-field-errors
+                ></span>
+              </p>
+              <p class="field">
+                <label for="message" class="visually-hidden"
+                  >Select an activity factor:</label
+                >
+                <textarea
+                  class="feedback__form feedback__form-textarea"
+                  id="message"
+                  name="message"
+                  placeholder="Your Massage"
+                  required
+                  minlength="3"
+                  maxlength="800"
+                  aria-errormessage="message-errors"
+                ></textarea>
+
+                <span
+                  class="field__errors"
+                  id="message-errors"
+                  data-js-form-field-errors
+                ></span>
+              </p>
+            </div>
+
+            <div class="feedback__form-button">
+              <button class="button" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer content content--light">
+      <div class="footer__inner container">
+        <h2 class="visually-hidden">Contacts and socials</h2>
+        <div class="footer__body">
+          <div class="footer__description">
+            <a
+              href="/"
+              class="footer__logo logo"
+              aria-label="Home"
+              title="Home"
+            >
+              <img
+                src="/icons/logo.svg"
+                alt=""
+                width="44"
+                height="47.5"
+                class="logo__image"
+                loading="lazy"
+              />
+              <span class="logo__title">tajam</span>
+            </a>
+            <p class="footer__description-text">
+              lorem quis bibendum auctor, nisi elit consequat ipsum, nec
+              sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare
+              odio non mauris vitae erat in elit
+            </p>
+          </div>
+          <div class="footer__contacts">
+            <h3 class="footer__title">Our studio</h3>
+            <ul class="footer__contacts-list">
+              <li class="footer__contacts-item">
+                <img
+                  src="/icons/map-mark.svg"
+                  width="14"
+                  height="19"
+                  alt=""
+                  loading="lazy"
+                />
+                <p class="footer__contacts-address">
+                  Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres -
+                  Jakarta Barat 11480 - Indonesia
+                </p>
+              </li>
+              <li class="footer__contacts-item">
+                <img
+                  src="/icons/phone.svg"
+                  width="16"
+                  height="16"
+                  alt=""
+                  loading="lazy"
+                />
+                <a href="tel:+622122243333" class="footer__contacts-number"
+                  >(+62) 21-2224 3333</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__soc1als">
+            <h3 class="footer__title">Stay in touch</h3>
+            <form class="footer__subscribe">
+              <label class="visually-hidden" for="subscribe-email">Email</label>
+              <input
+                id="subscribe-email"
+                placeholder="Subscribe our newsletter"
+                type="email"
+                class="footer__subscribe-input input"
+              />
+              <button
+                class="footer__subscribe-button"
+                title="Subscribe"
+                type="submit"
+              >
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25 1L8.65957 17M25 1L12.7447 25L8.65957 17M25 1L1 12.5L8.65957 17"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <span class="visually-hidden">Subscribe</span>
+            </form>
+            <ul class="footer__soc1als-list">
+              <li class="footer__soc1als-item">
+                <a href="/" target="_blank" class="footer__soc1als-link">
+                  <svg
+                    width="9"
+                    height="16"
+                    viewBox="0 0 9 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.65094 15.9304V9.40304L8.22087 9.40304L8.75398 6.5H5.65094V5.47327C5.65094 4.70622 5.80139 4.17518 6.14656 3.83591C6.49174 3.49663 7.03165 3.34911 7.81051 3.34911C8.00764 3.34911 8.18909 3.35107 8.35009 3.35499C8.58426 3.3607 8.77515 3.37054 8.90803 3.38453V0.752878C8.85493 0.738124 8.79223 0.723372 8.722 0.70885C8.56289 0.675949 8.36508 0.644233 8.15245 0.616382C7.70811 0.558172 7.19901 0.516823 6.84284 0.516823C5.4044 0.516823 4.31729 0.824561 3.55847 1.46198C2.64266 2.23126 2.20502 3.48075 2.20502 5.24907V6.49999H0.246048V9.40304H2.20502V15.7202C2.55668 15.9304 4.89583 16 5.65094 15.9304Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__soc1als-item">
+                <a href="/" target="_blank" class="footer__soc1als-link">
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.7715 2.73842C10.7788 2.85776 10.7788 2.97711 10.7788 3.09755C10.7788 6.76747 8.30225 11 3.7738 11V10.9978C2.43608 11 1.12614 10.5677 0 9.75268C0.194516 9.77908 0.390006 9.79228 0.585984 9.79283C1.69458 9.79393 2.77148 9.3743 3.64363 8.6016C2.59013 8.57905 1.6663 7.80415 1.34357 6.67287C1.71261 6.75317 2.09287 6.73667 2.45509 6.62503C1.30652 6.36324 0.480195 5.22481 0.480195 3.9027V3.8675C0.822425 4.08254 1.20561 4.20188 1.59756 4.21508C0.515783 3.39948 0.182328 1.77598 0.835588 0.506662C2.08556 2.2418 3.9298 3.29664 5.90957 3.40828C5.71115 2.44364 5.98221 1.4328 6.62182 0.754697C7.61341 -0.296837 9.17294 -0.24294 10.1051 0.875139C10.6564 0.752497 11.1849 0.524261 11.6685 0.200882C11.4847 0.843791 11.1001 1.38991 10.5862 1.73693C11.0742 1.67204 11.551 1.52465 12 1.29971C11.6695 1.85848 11.2531 2.3452 10.7715 2.73842Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__soc1als-item">
+                <a href="/" target="_blank" class="footer__soc1als-link">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM9.73509 14.5249C9.18144 14.6718 8.59986 14.75 8 14.75C7.09221 14.75 6.22627 14.5708 5.43563 14.2458C6.18589 11.4765 8.26057 9.49309 10.6373 8.60974C11.0495 10.6074 10.7424 12.7498 9.73509 14.5249ZM11.5117 13.7657C12.1563 12.01 12.2833 10.0761 11.8882 8.25257C12.842 8.06002 13.8149 8.04234 14.7465 8.21807C14.6719 10.5686 13.3956 12.6159 11.5117 13.7657ZM14.6588 6.88796C13.6274 6.73665 12.5654 6.78091 11.5283 7.00243C11.3274 6.43869 11.0737 5.89561 10.7716 5.37994C11.624 4.88763 12.4012 4.26584 13.0666 3.53986C13.8823 4.46569 14.4481 5.61685 14.6588 6.88796ZM12.1196 2.65248C11.5194 3.3096 10.8133 3.86842 10.0388 4.30398C9.516 3.63952 8.91119 3.04129 8.23688 2.52763L8.22058 2.51523L8.20368 2.50395C8.2036 2.5039 8.20215 2.50293 8.19908 2.50075C8.19548 2.49821 8.19068 2.49478 8.18453 2.49031C8.17208 2.48126 8.15665 2.46984 8.13815 2.45599C8.11715 2.44027 8.09607 2.42437 8.07343 2.40729L8.06883 2.40381C8.0505 2.38997 8.0311 2.37533 8.00985 2.35936C7.9639 2.32481 7.9135 2.28723 7.8672 2.25405C7.83485 2.23087 7.78835 2.19807 7.74085 2.16915L7.71073 2.14831C7.64895 2.10552 7.55609 2.0412 7.47178 1.98943C7.393 1.93421 7.28655 1.8713 7.2168 1.83046C7.14933 1.79094 7.07666 1.74947 7.03151 1.7237L6.99685 1.70389C6.98855 1.69904 6.98133 1.69502 6.97834 1.69335L6.97775 1.69302C6.97249 1.69008 6.96665 1.68686 6.96139 1.68397L6.9543 1.68006C6.94423 1.67452 6.93415 1.66897 6.92368 1.66314C6.91168 1.65646 6.90198 1.65096 6.8949 1.64684L6.89003 1.64343L6.8728 1.6329C6.81047 1.59482 6.74552 1.56003 6.71027 1.54115L6.69725 1.53418L6.68218 1.52606L6.6667 1.51875C6.63325 1.50296 6.58253 1.47879 6.52538 1.45154L6.52403 1.4509C6.50609 1.44235 6.48742 1.43345 6.46857 1.42447C6.9606 1.31034 7.47325 1.25 8 1.25C9.55097 1.25 10.9798 1.77309 12.1196 2.65248ZM4.69083 2.11544C3.68965 2.67967 2.84692 3.492 2.24608 4.46903C2.96081 4.83152 3.72849 5.08763 4.51933 5.22843L4.52103 5.22872L4.52273 5.22905C5.5 5.4084 6.50748 5.4036 7.49383 5.22577C7.9463 5.14408 8.3907 5.02262 8.82186 4.86486C8.41661 4.38552 7.96141 3.95064 7.46343 3.56978C7.4293 3.54613 7.3915 3.51805 7.3606 3.49493C7.3372 3.47743 7.3097 3.45668 7.28258 3.4362L7.28186 3.43566C7.26388 3.42209 7.24611 3.40869 7.22983 3.39645C7.18528 3.36295 7.1448 3.33283 7.11128 3.30883C7.0895 3.29322 7.07699 3.2848 7.07184 3.28133C7.06993 3.28004 7.06903 3.27943 7.06905 3.2794L7.0499 3.2686L7.02738 3.25333C6.99423 3.23083 6.9647 3.2104 6.93765 3.19168L6.9374 3.1915C6.87812 3.15048 6.83061 3.11761 6.7824 3.089L6.7508 3.07023L6.72235 3.04867C6.72318 3.04931 6.7227 3.04899 6.72063 3.0476L6.72035 3.04742C6.7153 3.04407 6.70199 3.03524 6.67745 3.02C6.6445 2.99958 6.6041 2.97545 6.56093 2.95015C6.49968 2.9143 6.4439 2.88248 6.39978 2.8573L6.39455 2.85432C6.37614 2.8438 6.35988 2.83452 6.34628 2.82668L6.34493 2.8259L6.33425 2.82L6.3292 2.81723C6.31918 2.81173 6.3058 2.80435 6.29218 2.79678C6.27623 2.7879 6.25688 2.777 6.23805 2.76598C6.22775 2.75995 6.20855 2.74865 6.18705 2.7347C6.16063 2.71895 6.13228 2.70373 6.09853 2.6856L6.09703 2.68478C6.05665 2.66568 6.0064 2.64173 5.95308 2.61628C5.85273 2.56843 5.74138 2.51535 5.6641 2.47941L5.65578 2.47554L5.62085 2.45808C5.49847 2.40134 5.35196 2.3458 5.18789 2.28359L5.18733 2.28337C5.1516 2.26983 5.11505 2.25597 5.07773 2.24172C4.97653 2.2054 4.87144 2.17233 4.76136 2.13768L4.7611 2.1376C4.7379 2.1303 4.71448 2.12293 4.69083 2.11544ZM1.67597 5.63485C2.49963 6.0505 3.38208 6.34379 4.29003 6.50562C5.42658 6.714 6.59105 6.70708 7.7243 6.50275C8.36935 6.38629 8.99909 6.2008 9.60291 5.95363C9.87168 6.40042 10.0977 6.87123 10.2776 7.36002C7.56617 8.3366 5.20007 10.5431 4.26428 13.6229C2.44729 12.4133 1.25 10.3465 1.25 8C1.25 7.16786 1.40058 6.37089 1.67597 5.63485Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__soc1als-item">
+                <a href="/" target="_blank" class="footer__soc1als-link">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.497 4.38883C11.0003 4.3898 10.5964 3.98763 10.5955 3.49093C10.5945 2.99423 10.9967 2.59036 11.4936 2.58939C11.9905 2.58841 12.3944 2.99082 12.3954 3.48752C12.3961 3.98422 11.9939 4.38785 11.497 4.38883Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.50717 11.3506C5.38068 11.3548 3.65319 9.6343 3.64906 7.50729C3.64493 5.38077 5.36585 3.65301 7.49235 3.64888C9.61933 3.64475 11.3471 5.36619 11.3512 7.49247C11.3553 9.61948 9.63391 11.3465 7.50717 11.3506ZM7.49502 5.00022C6.11478 5.00265 4.99746 6.12411 4.99989 7.50462C5.00256 8.88536 6.12426 10.0024 7.5045 9.99978C8.88523 9.9971 10.0026 8.87589 9.99987 7.49514C9.9972 6.11439 8.87552 4.99755 7.49502 5.00022Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.5745 0.404049C3.05079 0.217422 3.59583 0.0896014 4.39385 0.0519364C5.19382 0.0135454 5.4492 0.00479439 7.48555 0.000907888C9.52238 -0.00297861 9.77777 0.00479289 10.5777 0.0402709C11.376 0.0747769 11.9213 0.200655 12.3985 0.38534C12.8923 0.575609 13.3112 0.831738 13.7287 1.24752C14.1462 1.66378 14.4033 2.08126 14.596 2.57432C14.7824 3.05109 14.9102 3.59566 14.9481 4.39417C14.986 5.19389 14.9952 5.44904 14.9991 7.48566C15.003 9.52203 14.9947 9.77767 14.9598 10.5781C14.925 11.3759 14.7994 11.9214 14.6147 12.3985C14.4239 12.8922 14.1683 13.3112 13.7525 13.7287C13.3367 14.1464 12.9188 14.4032 12.4257 14.5962C11.949 14.7823 11.4044 14.9102 10.6064 14.9483C9.80645 14.9862 9.55105 14.9952 7.51398 14.9991C5.47787 15.003 5.22249 14.9952 4.42253 14.96C3.62426 14.925 3.07873 14.7993 2.60172 14.6149C2.10795 14.4239 1.68901 14.1685 1.27153 13.7525C0.853819 13.3365 0.596491 12.9187 0.404036 12.4257C0.217411 11.9492 0.0900669 11.4043 0.0519204 10.6066C0.0137724 9.80634 0.00478442 9.55071 0.000899415 7.51434C-0.00300059 5.47772 0.00502292 5.22257 0.0400104 4.4226C0.0752499 3.62409 0.200398 3.07879 0.385081 2.60129C0.57583 2.10774 0.831466 1.68905 1.24773 1.27133C1.6635 0.853853 2.08146 0.596261 2.5745 0.404049ZM3.08846 13.3549C3.35309 13.4567 3.75014 13.5782 4.48134 13.6101C5.27254 13.6443 5.50946 13.6519 7.51155 13.648C9.51436 13.6443 9.75129 13.6358 10.5422 13.5987C11.2727 13.5639 11.6698 13.4409 11.9337 13.3379C12.2838 13.2011 12.5332 13.0376 12.7951 12.7754C13.0571 12.5122 13.2191 12.2621 13.3547 11.912C13.4568 11.6471 13.5781 11.2498 13.6099 10.5186C13.6446 9.72785 13.6519 9.49068 13.648 7.48809C13.6444 5.48598 13.6359 5.24881 13.5982 4.45784C13.5637 3.72712 13.441 3.33005 13.3377 3.06639C13.2009 2.71574 13.0379 2.46691 12.7749 2.20471C12.512 1.9425 12.262 1.7809 11.9113 1.64531C11.6472 1.54301 11.2496 1.42199 10.5189 1.39016C9.72771 1.35541 9.49053 1.34836 7.48798 1.35225C5.48589 1.35614 5.24897 1.36415 4.45801 1.40158C3.72706 1.43632 3.33048 1.55904 3.06609 1.66232C2.71617 1.79913 2.46685 1.9617 2.20466 2.22488C1.94294 2.48804 1.78086 2.73761 1.64527 3.08851C1.54371 3.3529 1.42147 3.75045 1.39013 4.48117C1.35561 5.27238 1.34833 5.50956 1.35222 7.51166C1.35587 9.51425 1.36436 9.75143 1.40155 10.5419C1.43581 11.2731 1.55949 11.6697 1.66229 11.9343C1.79909 12.284 1.96215 12.5333 2.22483 12.7955C2.488 13.0568 2.73805 13.2193 3.08846 13.3549Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__soc1als-item">
+                <a href="/" target="_blank" class="footer__soc1als-link">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.430577 11.545C1.78804 9.55873 4.40933 9.39324 5.70044 9.5727C5.34137 9.17258 4.43628 8.42787 5.07493 7.2003C2.16059 7.57248 1.22922 5.71052 1.09617 4.24833C0.830069 1.79318 2.90568 0.0279311 5.03484 0H9.74555C9.58589 0.151876 8.80072 0.689899 8.61444 0.689899L7.37689 0.703515C10.5307 3.77943 7.46986 6.35887 6.84435 6.89655C5.58019 8.48269 9.54581 9.26895 9.33292 11.9587C9.33292 14.3999 7.35028 16 4.24967 16C0.803122 15.9864 -0.846721 13.7659 0.430577 11.545ZM7.33715 14.5106C8.5747 13.5312 8.28198 12.083 7.32367 11.1173C6.75138 10.5381 6.05951 9.98643 4.5956 10.1655C2.87873 10.3726 1.62804 11.2276 1.69474 12.5655C2.05381 15.4072 6.00629 15.4759 7.33681 14.4966L7.33715 14.5106ZM6.49875 6.1658C7.92257 4.95184 6.60519 0.71783 4.6623 0.71783C3.42475 0.71783 2.7861 1.64165 2.73254 2.95232C2.63957 5.37954 4.78221 7.62799 6.49875 6.1658ZM12.7929 7.71039L10.6506 7.72435V6.60711H12.7667V4.41417H13.8446V6.60746L15.9869 6.62108L16 7.7247H13.8446V9.93161L12.7798 9.94558L12.7929 7.71039Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__soc1als-item">
+                <a href="/" target="_blank" class="footer__soc1als-link">
+                  <svg
+                    width="16"
+                    height="11"
+                    viewBox="0 0 16 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.1485 0.838319C15.3967 1.08212 15.575 1.38526 15.6655 1.71742C16 2.94339 16 5.5 16 5.5C16 5.5 16 8.05661 15.6655 9.28258C15.575 9.61474 15.3967 9.91788 15.1485 10.1617C14.9002 10.4055 14.5907 10.5814 14.2509 10.6718C13 11 8 11 8 11C8 11 3 11 1.74909 10.6718C1.40929 10.5814 1.09977 10.4055 0.851525 10.1617C0.603277 9.91788 0.425004 9.61474 0.334545 9.28258C3.97364e-08 8.05661 0 5.5 0 5.5C0 5.5 3.97364e-08 2.94339 0.334545 1.71742C0.425004 1.38526 0.603277 1.08212 0.851525 0.838319C1.09977 0.59452 1.40929 0.418622 1.74909 0.328226C3 0 8 0 8 0C8 0 13 0 14.2509 0.328226C14.5907 0.418622 14.9002 0.59452 15.1485 0.838319ZM10.5455 5.50002L6.36365 3.17849V7.82155L10.5455 5.50002Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__extra">
+          <div class="footer__extra-menu">
+            <ul class="footer__extra-menu-list">
+              <li class="footer__extra-menu-item">
+                <a href="/" class="footer__extra-menu-link">Help</a>
+              </li>
+              <li class="footer__extra-menu-item">
+                <a href="/" class="footer__extra-menu-link"
+                  >Terms & condition</a
+                >
+              </li>
+              <li class="footer__extra-menu-item">
+                <a href="/" class="footer__extra-menu-link">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <p class="footer__extra-copyright">
+            Copyright © <time datetime="2015">2015</time> - Tajem Creative
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

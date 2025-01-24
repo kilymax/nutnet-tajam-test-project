@@ -1,7 +1,7 @@
-export default class Feedback {
+class Feedback {
   selectors = {
     form: "[data-js-form]",
-    fieldErrors: "[data-js-form-field-errors",
+    fieldErrors: "[data-js-form-field-errors]",
   };
 
   errorMessages = {
@@ -14,12 +14,10 @@ export default class Feedback {
   };
 
   constructor() {
-    // this.rootElement = document.querySelector(this.selectors.root);
-
     this.bindEvents();
   }
 
-  manageErrors(fieldElement, errorMessages) {
+  manageErrors = (fieldElement, errorMessages) => {
     const fieldErrorsElement = fieldElement.parentElement.querySelector(
       this.selectors.fieldErrors,
     );
@@ -32,14 +30,11 @@ export default class Feedback {
       .map((message) => `<span class="field__error">${message}</span>`)
       .join("");
 
-    if (errorMessages.length > 0) {
-      fieldInputElement.style.borderColor = "#ff5500";
-    } else {
-      fieldInputElement.style.borderColor = "rgba(0, 0, 0, 0.1)";
-    }
-  }
+    fieldInputElement.style.borderColor =
+      errorMessages.length > 0 ? "#ff5500" : "rgba(0, 0, 0, 0.1)";
+  };
 
-  validateField(fieldElement) {
+  validateField = (fieldElement) => {
     const errors = fieldElement.validity;
     const errorMessages = [];
 
@@ -56,9 +51,9 @@ export default class Feedback {
     fieldElement.areaInvalid = !isValid;
 
     return isValid;
-  }
+  };
 
-  onBlur(event) {
+  onBlur = (event) => {
     const { target } = event;
     const isFormField = target.closest(this.selectors.form);
     const isRequired = target.required;
@@ -66,9 +61,9 @@ export default class Feedback {
     if (isRequired && isFormField) {
       this.validateField(target);
     }
-  }
+  };
 
-  onSubmit(event) {
+  onSubmit = (event) => {
     event.preventDefault();
 
     const isFormElement = event.target.matches(this.selectors.form);
@@ -96,20 +91,14 @@ export default class Feedback {
     });
 
     if (!isFormValid) {
-      event.preventDefault();
       firstInvalidField.focus();
     }
-  }
+  };
 
-  bindEvents() {
-    document.addEventListener(
-      "blur",
-      (event) => {
-        this.onBlur(event);
-      },
-      true,
-    );
-
-    document.addEventListener("submit", (event) => this.onSubmit(event));
-  }
+  bindEvents = () => {
+    document.addEventListener("blur", this.onBlur, true);
+    document.addEventListener("submit", this.onSubmit);
+  };
 }
+
+export default Feedback;
