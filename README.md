@@ -82,7 +82,7 @@
 2. ✅ реализовать функционал якорных ссылок для каждого раздела в пунктах меню шапки сайта;
 3. ❌ соблюдения Pixel Perfect;
 4. ✅ настройка автоматической сборки
-5. ❓ оптимизация: минификация CSS/JS. Два минимизатора прикручивал ([vite-plugin-optimize-css-modules](https://www.npmjs.com/package/vite-plugin-optimize-css-modules) и [rollup-plugin-css-porter](https://www.npmjs.com/package/rollup-plugin-css-porter)), но на выходе не было никаких изменений. Vite сам оптимизирует из коробки, насколько мне известно.
+5. ❓ оптимизация: минификация CSS/JS. Два минимизатора прикручивал ([vite-plugin-optimize-css-modules](https://www.npmjs.com/package/vite-plugin-optimize-css-modules) и [rollup-plugin-css-porter](https://www.npmjs.com/package/rollup-plugin-css-porter)), но на выходе не заметил никаких изменений. Есть предположение, что Vite сам оптимизирует из коробки.
 6. ✅ оптимизация: сжатие изображений (использовал [vite-plugin-image-optimizer](https://www.npmjs.com/package/vite-plugin-image-optimizer))
 7. ✅ настройка Linter, Prettier;
 
