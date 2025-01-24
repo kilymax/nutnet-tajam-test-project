@@ -1,84 +1,115 @@
 export default class Feedback {
-    defaultIndex = 2;
+  selectors = {
+    form: "[data-js-form]",
+    fieldErrors: "[data-js-form-field-errors",
+  };
 
-    selectors = {
-        root: "[data-js-reviews]",
-        carousel: "[data-js-reviews-carousel]",
-        controls: "[data-js-reviews-controls]",
-    };
+  errorMessages = {
+    valueMissing: () => "Поле обязательно для заполнения",
+    patternMismatch: ({ title }) => title || "Данные не соответствуют формату",
+    tooShort: ({ minLength }) =>
+      `Слишком короткое значение (минимум символов – ${minLength})`,
+    tooLong: ({ maxLength }) =>
+      `Слишком длинное значение (максимум символов – ${maxLength})`,
+  };
 
-    stateClasses = {
-        isActive: "is-active",
-    };
+  constructor() {
+    // this.rootElement = document.querySelector(this.selectors.root);
 
-    constructor() {
-        this.rootElement = document.querySelector(this.selectors.root);
+    this.bindEvents();
+  }
 
-        this.carouselElements = this.rootElement
-            .querySelector(this.selectors.carousel)
-            .querySelectorAll(".reviews__carousel-item");
+  manageErrors(fieldElement, errorMessages) {
+    const fieldErrorsElement = fieldElement.parentElement.querySelector(
+      this.selectors.fieldErrors,
+    );
 
-        this.reviewTexts = this.rootElement
-            .querySelector(this.selectors.carousel)
-            .querySelectorAll(".reviews__review-wrapper");
+    const fieldInputElement =
+      fieldElement.parentElement.querySelector("input") ||
+      fieldElement.parentElement.querySelector("textarea");
 
-        this.controlElements = this.rootElement
-            .querySelector(this.selectors.controls)
-            .querySelectorAll(".reviews__controls-item");
+    fieldErrorsElement.innerHTML = errorMessages
+      .map((message) => `<span class="field__error">${message}</span>`)
+      .join("");
 
-        this.bindEvents();
+    if (errorMessages.length > 0) {
+      fieldInputElement.style.borderColor = "#ff5500";
+    } else {
+      fieldInputElement.style.borderColor = "rgba(0, 0, 0, 0.1)";
+    }
+  }
+
+  validateField(fieldElement) {
+    const errors = fieldElement.validity;
+    const errorMessages = [];
+
+    Object.entries(this.errorMessages).forEach(
+      ([errorType, getErrorMessage]) => {
+        if (errors[errorType]) {
+          errorMessages.push(getErrorMessage(fieldElement));
+        }
+      },
+    );
+
+    this.manageErrors(fieldElement, errorMessages);
+    const isValid = errorMessages.length === 0;
+    fieldElement.areaInvalid = !isValid;
+
+    return isValid;
+  }
+
+  onBlur(event) {
+    const { target } = event;
+    const isFormField = target.closest(this.selectors.form);
+    const isRequired = target.required;
+
+    if (isRequired && isFormField) {
+      this.validateField(target);
+    }
+  }
+
+  onSubmit(event) {
+    event.preventDefault();
+
+    const isFormElement = event.target.matches(this.selectors.form);
+
+    if (!isFormElement) {
+      return;
     }
 
-    hideReviews = () => {
-        this.carouselElements.forEach((review) => {
-            review.classList.remove("is-active");
-        });
-        this.controlElements.forEach((control) => {
-            control.classList.remove("is-active");
-        });
-    };
+    const requiredElements = [...event.target.elements].filter(
+      (element) => element.required,
+    );
+    let isFormValid = true;
+    let firstInvalidField = null;
 
-    showReview = (index) => {
-        this.carouselElements[index].classList.add("is-active");
-        this.controlElements[index].classList.add("is-active");
-    };
+    requiredElements.forEach((element) => {
+      const isFieldValid = this.validateField(element);
 
-    calcReviewMaxHeight = () => {
-        let maxHeight = 0;
-        let height = 0;
-        this.reviewTexts.forEach((text, index) => {
-            this.carouselElements[index].classList.add("is-active");
-            text.style.height = "auto";
-            height = parseFloat(getComputedStyle(text, null).height);
-            this.carouselElements[index].classList.remove("is-active");
+      if (!isFieldValid) {
+        isFormValid = false;
 
-            if (maxHeight < height) {
-                maxHeight = height;
-            }
-        });
+        if (!firstInvalidField) {
+          firstInvalidField = element;
+        }
+      }
+    });
 
-        console.log(maxHeight);
-
-        this.reviewTexts.forEach((text) => {
-            text.style.height = `${maxHeight}px`;
-        });
-
-        this.showReview(this.defaultIndex);
-    };
-
-    bindEvents() {
-        this.hideReviews();
-        this.calcReviewMaxHeight();
-        this.showReview(this.defaultIndex);
-
-        this.controlElements.forEach((control, index) =>
-            control.addEventListener("click", () => {
-                this.hideReviews();
-                this.showReview(index);
-                this.defaultIndex = index;
-            }),
-        );
-
-        window.addEventListener("resize", this.calcReviewMaxHeight);
+    if (!isFormValid) {
+      event.preventDefault();
+      firstInvalidField.focus();
     }
+  }
+
+  bindEvents() {
+    document.addEventListener(
+      "blur",
+      (event) => {
+        this.onBlur(event);
+      },
+      true,
+    );
+
+    document.addEventListener("submit", (event) => this.onSubmit(event));
+  }
 }

@@ -30,7 +30,6 @@
     }
 
     &__item {
-        width: rem(266);
         aspect-ratio: 1.33;
 
         @include mobile {
@@ -38,6 +37,7 @@
         }
 
         &-image {
+            object-fit: cover;
             width: 100%;
             height: 100%;
         }

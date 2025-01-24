@@ -32,6 +32,7 @@ class Reviews {
     hideReviews = () => {
         this.carouselElements.forEach((review) => {
             review.classList.remove("is-active");
+            review.style.classList;
         });
         this.controlElements.forEach((control) => {
             control.classList.remove("is-active");

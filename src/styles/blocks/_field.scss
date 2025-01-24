@@ -1,0 +1,11 @@
+@use "../helpers/" as *;
+
+.field {
+    &__errors {
+        display: flex;
+        flex-direction: column;
+        padding-top: rem(5);
+        padding-left: rem(8);
+        color: var(--color-error);
+    }
+}

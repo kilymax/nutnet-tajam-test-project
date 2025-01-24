@@ -775,74 +775,124 @@
                 </div>
             </section>
 
-            <sectiion id="contact" class="feedback content content--dark">
+            <section id="contact" class="feedback content content--dark">
                 <div class="feedback__inner container">
                     <h2 class="feedback__title">Give us a good news</h2>
-                    <form class="feedback__form">
+                    <form class="feedback__form" data-js-form novalidate>
                         <div class="feedback__form-body">
-                            <label for="name" class="visually-hidden"
-                                >Name</label
-                            >
-                            <input
-                                id="name"
-                                placeholder="Name"
-                                type="text"
-                                class="feedback__form-input input"
-                                required
-                            />
-                            <label for="email" class="visually-hidden"
-                                >Email</label
-                            >
-                            <input
-                                id="email"
-                                placeholder="Email"
-                                type="email"
-                                class="feedback__form-input input"
-                                required
-                            />
-                            <label for="number" class="visually-hidden"
-                                >Phone number</label
-                            >
-                            <input
-                                id="number"
-                                placeholder="+1 (999) 999-99-99"
-                                type="tel"
-                                class="feedback__form-input input"
-                                required
-                            />
-                            <label for="subject" class="visually-hidden"
-                                >Subject</label
-                            >
-                            <select
-                                id="subject"
-                                class="feedback__form-input input"
-                                required
-                            >
-                                <option value="" disabled selected>
-                                    Subject
-                                </option>
-                                <option value="career">Career</option>
-                                <option value="partnership">Partnership</option>
-                                <option value="help">Help</option>
-                                <option value="other">Other</option>
-                            </select>
-                            <label for="message" class="visually-hidden"
-                                >Select an activity factor:</label
-                            >
-                            <textarea
-                                class="feedback__form feedback__form-textarea"
-                                id="message"
-                                name="message"
-                                placeholder="Your Massage"
-                                required
-                            ></textarea>
+                            <p class="field">
+                                <label for="name" class="visually-hidden"
+                                    >Name</label
+                                >
+                                <input
+                                    id="name"
+                                    placeholder="Name"
+                                    type="text"
+                                    class="feedback__form-input input"
+                                    required
+                                    minlength="2"
+                                    maxlength="50"
+                                    aria-errormessage="name-errors"
+                                />
+                                <span
+                                    class="field__errors"
+                                    id="name-errors"
+                                    data-js-form-field-errors
+                                ></span>
+                            </p>
+                            <p class="field">
+                                <label for="email" class="visually-hidden"
+                                    >Email</label
+                                >
+                                <input
+                                    id="email"
+                                    placeholder="Email"
+                                    type="email"
+                                    class="feedback__form-input input"
+                                    pattern="^\S+@\S+\.\S+$"
+                                    title="Не соответствует формату: example@gmail.com"
+                                    required
+                                    minlength="5"
+                                    maxlength="64"
+                                    aria-errormessage="email-errors"
+                                />
+                                <span
+                                    class="field__errors"
+                                    id="email-errors"
+                                    data-js-form-field-errors
+                                ></span>
+                            </p>
+                            <p class="field">
+                                <label for="number" class="visually-hidden"
+                                    >Phone number</label
+                                >
+                                <input
+                                    id="number"
+                                    placeholder="+1 (999) 999-99-99"
+                                    type="tel"
+                                    class="feedback__form-input input"
+                                    required
+                                    pattern="[+]?[0-9]{1,4}[0-9]{6,8}"
+                                    minlength="11"
+                                    maxlength="12"
+                                    title="Не соответствует формату: +79120123456"
+                                    aria-errormessage="number-errors"
+                                />
+                                <span
+                                    class="field__errors"
+                                    id="number-errors"
+                                    data-js-form-field-errors
+                                ></span>
+                            </p>
+                            <p class="field">
+                                <label for="subject" class="visually-hidden"
+                                    >Subject</label
+                                >
+                                <input
+                                    id="subject"
+                                    placeholder="Subject"
+                                    type="text"
+                                    class="feedback__form-input input"
+                                    required
+                                    minlength="3"
+                                    maxlength="50"
+                                    aria-errormessage="subject-errors"
+                                />
+                                <span
+                                    class="field__errors"
+                                    id="subject-errors"
+                                    data-js-form-field-errors
+                                ></span>
+                            </p>
+                            <p class="field">
+                                <label for="message" class="visually-hidden"
+                                    >Select an activity factor:</label
+                                >
+                                <textarea
+                                    class="feedback__form feedback__form-textarea"
+                                    id="message"
+                                    name="message"
+                                    placeholder="Your Massage"
+                                    required
+                                    minlength="3"
+                                    maxlength="800"
+                                    aria-errormessage="message-errors"
+                                ></textarea>
+
+                                <span
+                                    class="field__errors"
+                                    id="message-errors"
+                                    data-js-form-field-errors
+                                ></span>
+                            </p>
                         </div>
+
                         <div class="feedback__form-button">
                             <button class="button" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
-            </sectiion>
+            </section>
         </main>
         <footer class="footer content content--light">
             <div class="footer__inner container">

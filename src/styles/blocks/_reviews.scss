@@ -41,8 +41,6 @@
             row-gap: fluid(44, 22);
 
             &:not(.is-active) {
-                translate: 200%;
-
                 @include hide;
             }
         }
@@ -51,6 +49,7 @@
     &__review-wrapper {
         display: flex;
         align-items: center;
+        animation: fade 0.7s;
     }
 
     &__text {
@@ -94,5 +93,31 @@
         .is-active {
             @include square(70px);
         }
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        translate: 8%;
+    }
+    20% {
+        translate: -6%;
+    }
+    40% {
+        translate: 4.5%;
+    }
+    60% {
+        translate: -3.25%;
+    }
+    80% {
+        translate: 2%;
+    }
+    90% {
+        translate: -1%;
+    }
+    100% {
+        opacity: 1;
+        translate: 0;
     }
 }
